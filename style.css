@@ -19,12 +19,16 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    
     background-color: var(--corBackgroundHeaderCards);
     height: 10vh;
     width: 100%;
+    
     display: flex;
         justify-content: center;
         align-items: center;
+
+    padding-right: 3vh;
 }
 
 nav{
@@ -32,7 +36,7 @@ nav{
         justify-content: center;
         align-items: center;
         flex-direction: row;
-    gap: 100px;
+    /*gap: 100px;*/
 }
 
 section{
@@ -47,6 +51,16 @@ h1{
 .navsBtn{
     color: var(--corText);
     font-size: 30px;
+    padding: 50px; /**se for tirar esse padding, colocar o gap de 100px do nav{}*/
+}
+
+#logo{
+    background-color: #5C6B7A;
+    height: 100px;
+    width: 100px;
+
+    margin-left: 10vh;
+    margin-right: 35vh;
 }
 
 .pgTitulo{
