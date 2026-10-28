@@ -269,3 +269,11 @@ h1{
 #secAvaliacao .infosBox{
     margin-top: 60px;
 }
+
+@media (max-width: 768px){ /*? media para celular*/
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px){ /*! media para tablet*/
+
+}
