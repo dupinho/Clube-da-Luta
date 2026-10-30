@@ -3,8 +3,8 @@
     --corBackgroundHeaderCards: #07080D;
     --corBackgroundBoxInfos: #1A1A1A;
     --corText: #FEFEFF;
-    --tamanhoFontePgTitulo: 50px;
-    --tamanhoFontePgSubtitulo: 25px;
+    --tamanhoFontePgTitulo: 4vw;
+    --tamanhoFontePgSubtitulo: 2vw;
 }
 
 *{
@@ -15,8 +15,13 @@
     font-family: 'Bebas Neue', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     
@@ -42,44 +47,58 @@ nav{
 section{
     height: 90vh;
     width: 100%;
+
+    scroll-margin-top: 10vh;
 }
 
 h1{
-    padding-top: 20px;
+    padding-top: 5vh;/** 20px */
+}
+
+a{
+    color: inherit;
+
+    text-decoration: none; /*! da pra brincar de fazer a linha aparecer com isso aqui*/
 }
 
 .navsBtn{
     color: var(--corText);
-    font-size: 30px;
-    padding: 50px; /**se for tirar esse padding, colocar o gap de 100px do nav{}*/
+    font-size: 1.9rem;
+    
+    padding: 4vw; /**se for tirar esse padding(50px), colocar o gap de 100px do nav{}*/
 }
 
 #logo{
-    background-color: #5C6B7A;
-    height: 100px;
-    width: 100px;
+    background-color: aqua;
+    height: 8vh;
+    width: 10vw;
 
-    margin-left: 10vh;
-    margin-right: 35vh;
+    margin-left: 8vw;
+    margin-right: 10vw;
 }
 
 .pgTitulo{
     color: var(--corText);
     font-size: var(--tamanhoFontePgTitulo);
-    margin-left: 50px;
+    
+    margin-left: 4vw;
 }
 
 .pgSubtitulo{
     color: var(--corText);
     font-size: var(--tamanhoFontePgSubtitulo);
-    margin-left: 50px;
-    margin-bottom: 50px;
+    
+    margin-left: 4vw;
+    margin-bottom: 4vh;
 }
 
 #secHome{
     margin-top: 10vh;
+
     background-image: url(./imgs/ftHome.jpg);
         background-size: cover;
+        background-attachment: fixed;
+        background-position: center 10vh;
     
     display: flex;
         flex-direction: column;
@@ -99,7 +118,7 @@ h1{
 }
 
 #ftCapa{
-    margin-left: 100px;
+    margin-left: 8vw;
 }
 
 #infosFilme{
@@ -107,27 +126,27 @@ h1{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    margin-right: 75px;
+    margin-right: 6vw;
 }
 
 .infosBox{
     background-color: var(--corBackgroundBoxInfos);
     
-    width: 450px;
-    padding: 30px;
+    width: 36vw;
+    padding: 2.4vw;
     border-radius: 8px;
     
     color: var(--corText);
     
-    margin-right: 35px;
+    margin-right: 2.8vw;
 
     justify-self: flex-end;
     align-self: center;
 }
 
 #tituloResumo{
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 2.4vw;
+    margin-bottom: 1.6vh;
 }
 
 #secPersonagens{
@@ -139,15 +158,15 @@ h1{
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-    margin-top: 50px;
+    margin-top: 8vh;
 }
 
 .cards{
     background-color: var(--corBackgroundBoxInfos);
     
-    width: 300px;
-    height: 375px;
-    padding: 20px;
+    width: 22vw; /*! 1vw +-= 12.5px */
+    height: 57.7vh; /** 1vh +-= 6.5px */
+    padding: 1.6vw;
     border-radius: 32px;
     
     display: flex;
@@ -157,27 +176,32 @@ h1{
 }
 
 .ftPersoCard img{
+    height: 38.45vh;
+    width: 18vw;
+
+    object-fit: cover;
+
     border-radius: 32px;
     border: 4px solid var(--corText);
 }
 
 .personaNm{
     color: var(--corText);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: lighter;
 }
 
 .persoAdjetivo{
     color: var(--corText);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: lighter;
 
-    margin-bottom: 20px;
+    margin-bottom: 3vh;
 }
 
 #ftNarra{
-    width: 250px;
-    height: 250px;
+    height: 38.45vh;
+    width: 18vw;
     overflow: hidden;
     border-radius: 32px;
     border: 4px solid var(--corText);
@@ -186,27 +210,30 @@ h1{
 #ftNarra img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transform: scale(1.35);
     border: 0;
-    border-radius: 0;
+}
+
+.persoPg .infosBox{
+    width: 26vw;
 }
 
 #secPersonagensTyler{
     background-image: url(./imgs/ftTylerPersopg);
     background-size: cover;
+    background-position: center;
 }
 
 #secPersonagensNarrador{
     background-image: url(./imgs/ftNarradorPersopg);
     background-size: cover;
+    background-position: center;
 }
 
 #secPersonagensNarrador .infosBox{
-    margin-left: 35px;
+    margin-left: 2.8vw;
 
     justify-self: flex-start;
-    align-self: center;
 }
 
 #secPersonagensMarla{
@@ -267,7 +294,10 @@ h1{
 }
 
 #secAvaliacao .infosBox{
-    margin-top: 60px;
+    margin-top: 9.2vh;
+    margin-right: 8vw;
+
+    width: 26vw;
 }
 
 @media (max-width: 768px){ /*? media para celular*/
