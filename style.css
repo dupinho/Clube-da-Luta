@@ -23,6 +23,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 header{
     position: fixed;
     z-index: 1;
@@ -126,7 +130,12 @@ a{
 }
 
 #ftCapa{
+    margin-top: 4vh;
     margin-left: 8vw;
+}
+
+#ftCapaImg{
+    width: 21vw;
 }
 
 #infosFilme{
@@ -195,13 +204,13 @@ a{
 
 .personaNm{
     color: var(--corText);
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     font-weight: lighter;
 }
 
 .persoAdjetivo{
     color: var(--corText);
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: lighter;
 
     margin-bottom: 3vh;
@@ -243,6 +252,8 @@ a{
     background-size: cover;
     background-position: center;
 }
+
+
 
 #secPersonagensNarrador .infosBox{
     margin-left: 2.8vw;
