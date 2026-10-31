@@ -56,6 +56,8 @@ section{
     height: 90vh;
     width: 100%;
 
+    border-bottom: 1vh solid #FEFEFF;
+
     scroll-margin-top: 10vh;
 }
 
@@ -81,12 +83,12 @@ a{
 }
 
 #logo{
-    background-color: aqua;
     height: 8vh;
     width: 10vw;
 
-    margin-left: 8vw;
-    margin-right: 10vw;
+    margin-top: -2.5vh;
+    margin-left: 10vw;
+    margin-right: 8vw;
 }
 
 .pgTitulo{
