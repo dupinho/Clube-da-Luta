@@ -5,6 +5,10 @@
     --corText: #FEFEFF;
     --tamanhoFontePgTitulo: 4vw;
     --tamanhoFontePgSubtitulo: 2vw;
+    --alturaCard: 57.7vh;
+    --larguraCard: 22vw;
+    --alturaImgCard: 38.45vh;
+    --larguraImgCard: 18vw;
 }
 
 *{
@@ -58,7 +62,7 @@ h1{
 a{
     color: inherit;
 
-    text-decoration: none; /*! da pra brincar de fazer a linha aparecer com isso aqui*/
+    text-decoration: none;
 }
 
 .navsBtn{
@@ -66,6 +70,10 @@ a{
     font-size: 1.9rem;
     
     padding: 4vw; /**se for tirar esse padding(50px), colocar o gap de 100px do nav{}*/
+}
+
+.navsBtn:hover{
+    color: #5C6B7A; /*? trocar cor*/
 }
 
 #logo{
@@ -164,8 +172,8 @@ a{
 .cards{
     background-color: var(--corBackgroundBoxInfos);
     
-    width: 22vw; /*! 1vw +-= 12.5px */
-    height: 57.7vh; /** 1vh +-= 6.5px */
+    width: var(--larguraCard); /*! 1vw +-= 12.5px */
+    height: var(--alturaCard); /** 1vh +-= 6.5px */
     padding: 1.6vw;
     border-radius: 32px;
     
@@ -176,8 +184,8 @@ a{
 }
 
 .ftPersoCard img{
-    height: 38.45vh;
-    width: 18vw;
+    height: var(--alturaImgCard);
+    width: var(--larguraImgCard);
 
     object-fit: cover;
 
@@ -200,8 +208,8 @@ a{
 }
 
 #ftNarra{
-    height: 38.45vh;
-    width: 18vw;
+    height: var(--alturaImgCard);
+    width: var(--larguraImgCard);
     overflow: hidden;
     border-radius: 32px;
     border: 4px solid var(--corText);
@@ -212,6 +220,12 @@ a{
     height: 100%;
     transform: scale(1.35);
     border: 0;
+}
+
+.cards:hover{
+    width: calc(var(--larguraCard) + 2.5vw);
+    height: calc(var(--alturaCard) + 2.5vh);
+    translate: 0 -4vh;
 }
 
 .persoPg .infosBox{
