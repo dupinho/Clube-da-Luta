@@ -327,7 +327,10 @@ a{
     width: 26vw;
 }
 
-@media (max-width: 768px){ /*? media para celular*/
+@media (max-width: 768px){ 
+    #secHome{
+        background-image: url(./imgs/ftHomeMobile.jpg);
+    }
 
 }
 
