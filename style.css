@@ -114,7 +114,9 @@ a{
 #secHome{
     margin-top: 10vh;
 
-    background-image: url(./imgs/ftHome.jpg);
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.50) 500px, black), 
+        url(./imgs/ftHome.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-position: center 10vh;
@@ -396,6 +398,10 @@ footer{
         font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
     }
 
+    .infosBox{
+        
+    }
+
     #logo img{
         margin-top: 2vh;
         margin-left: 1vh;
@@ -424,13 +430,19 @@ footer{
         margin-bottom: 17.5vh;
     }
 
+
+    #secFilme{
+        display: flex;
+            flex-direction: column;
+    }
+
     #ftCapa{
         margin-top: -75vh;
         margin-left: 4vw;
     }
 
     #ftCapaImg{
-        width: 52.5vw;/** Teste de branch do Montez*/
+        width: 35vw;
     }
 
 }
