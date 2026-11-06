@@ -58,8 +58,6 @@ section{
     height: 90vh;
     width: 100%;
 
-    border-bottom: 1vh solid #FEFEFF;
-
     scroll-margin-top: 10vh;
 }
 
@@ -135,7 +133,10 @@ a{
 }
 
 #secFilme{
-    background-color: var(--corbackgroundSecBase);
+    background-image: url(./imgs/galpao.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #ftCapa{
@@ -336,6 +337,7 @@ a{
 
 footer{
     width: 100%;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
