@@ -58,8 +58,6 @@ section{
     height: 90vh;
     width: 100%;
 
-    border-bottom: 1vh solid #FEFEFF;
-
     scroll-margin-top: 10vh;
 }
 
@@ -377,13 +375,41 @@ a{
         margin-bottom: 17.5vh;
     }
 
+    #infosFilme{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #infosFilme h3{
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+
+    #infosFilme p{
+        font-size: 0.6rem;
+        font-weight: normal;
+
+        margin-right: 0;
+        margin-bottom: 4vh;
+    }
+
     #ftCapa{
-        margin-top: -75vh;
-        margin-left: 4vw;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
     }
 
     #ftCapaImg{
         width: 52.5vw;
+    }
+
+    #infosFilme .infosBox{
+        width: 90vw;
+        margin-right: -5vw;
+    }
+
+    #infosFilme .infosBox h3,p{
+        text-align: center;
     }
 
 }
