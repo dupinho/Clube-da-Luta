@@ -449,27 +449,6 @@ footer{
 }
 
 @media (max-width: 768px){
-    .navsBtn{
-        font-size: 0.8rem;
-        
-        padding: 3vw;
-    }
-
-    .pgTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
-    }
-
-    .pgSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
-    }
-
-    #logoProdutora{
-        margin-top: 2vh;
-        margin-left: 1vh;
-        margin-right: 10vh;
-        height: 7vh;
-    }
-
     /*! arrumar barra de navegação */
 
     #secHome{
@@ -510,17 +489,15 @@ footer{
         margin-bottom: 4vh;
     }
 
-    #ftCapa{
+    #bannerFilme{
         margin-top: 4vh;
         margin-bottom: 4vh;
-    }
-
-    #ftCapaImg{
-        width: 52.5vw;
+        
+        height: 2.5vh;
     }
 
     #infosFilme .infosBox{
-        width: 90vw;
+        width: 80vw;
         margin-right: -5vw;
     }
 
