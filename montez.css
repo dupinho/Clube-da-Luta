@@ -25,43 +25,10 @@ html{
     scroll-behavior: smooth;
 }
 
-.pgTitulo{
-    color: var(--corText);
-    font-size: var(--tamanhoFontePgTitulo);
-    font-family: var(--fontBabas);
-    font-weight: normal;
-    margin-left:5vw;
-
-}
-
-.pgSubtitulo{
-    color: var(--corText);
-    font-size: var(--tamanhoFontePgSubtitulo);
-    font-family: var(--fontOswald);
-    font-weight: normal;
-    margin-left:5vw;
-}
-
-.infosBox{
-    background-color: var(--corBackgroundBoxInfos);
-    
-    width: 36vw;
-    min-width: 320px;
-    max-width: 480px;
-    padding: 2rem;
-    border-radius: 8px;
-    
-    color: var(--corText);
-    
-    margin-right: 3vw;
-
-    justify-self: flex-end;
-    align-self: center;
-}
-
 section{
     height: 100vh;
     width: 100%;
+    
     border-bottom: 0.5rem solid #222222;
 
     scroll-margin-top: 10vh;
@@ -78,50 +45,87 @@ header{
     background-color:#1A1A1A;
     color: var(--corText);
     border-bottom: 2px solid #222222;
+    
     height: 80px;
     width: 100%;
     
     display: flex;
         align-items: center;
-
-
-}
-
-#mainHeader{
-
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#logoProdutora{
-    width: 120px;
-    height: 60px;
-    margin-left: 20px;
-    background-color: red;
-
 }
 
 nav{
     display: flex;
-    justify-content: center;
-    align-items: center;
+        justify-content: center;
+        align-items: center;
     width: 50%;
     gap: 3vw;
     font-size: 1.5rem;
 }
 
+.pgTitulo{
+    color: var(--corText);
+    font-size: var(--tamanhoFontePgTitulo);
+    font-family: var(--fontBabas);
+    font-weight: normal;
+    
+    margin-left:5vw;
+}
+
+.pgSubtitulo{
+    color: var(--corText);
+    font-size: var(--tamanhoFontePgSubtitulo);
+    font-family: var(--fontOswald);
+    font-weight: normal;
+    
+    margin-left:5vw;
+}
+
+.infosBox{
+    background-color: var(--corBackgroundBoxInfos);
+    
+    width: 36vw;
+    min-width: 320px;
+    max-width: 480px;
+    
+    border-radius: 8px;
+    
+    color: var(--corText);
+    
+    margin-right: 3vw;
+    padding: 2rem;
+
+    justify-self: flex-end;
+    align-self: center;
+}
+
+#mainHeader{
+    width: 100%;
+
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+#logoProdutora{
+    width: 120px;
+    height: 60px;
+    
+    margin-left: 20px;
+    background-color: red;
+
+}
+
 #secHome{
     margin-top: 10vh;
+    
     height: 90vh;
 
     background:
         radial-gradient(rgba(0, 0, 0, 0.50) 500px, #1a1a1a), 
         url(./imgs/ftHome.jpg);
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center 10vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 10vh;
     
     display: flex;
         flex-direction: column;
@@ -129,7 +133,6 @@ nav{
 }
 
 #mainHome{
-
     margin-left: 80px;
     margin-bottom: 50px;
     text-align: left;
@@ -137,10 +140,8 @@ nav{
 }
 
 #homeTitulo{
-
     font-size: 6vw;
     margin:0px;
-
 }
 
 #homeSubtitulo{
@@ -150,14 +151,11 @@ nav{
 
 #secFilme{
     background:
-    radial-gradient(rgba(0, 0, 0, 0.50) 500px, #222222),
-    url(./imgs/galpao.jfif);
+        radial-gradient(rgba(0, 0, 0, 0.50) 500px, #222222),
+        url(./imgs/galpao.jfif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-
-
 }
 
 #filmeTitulo{
@@ -166,8 +164,8 @@ nav{
 
 #infosFilme{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+        justify-content: space-between;
+        align-items: center;
     width: 100%;
 }
 
@@ -198,7 +196,7 @@ nav{
 }
 
 #bannerFilme:hover{
-    transform:scale(1.02);
+    transform: scale(1.02);
 }
 
 #infosBoxFilme{
@@ -206,8 +204,6 @@ nav{
 }
 
 #secPersonagens{
-
-
     background:
         radial-gradient(rgba(0, 0, 0, 0.50) 500px, black), 
         url(./imgs/ftfundoPersonagens.jpeg);
@@ -226,14 +222,14 @@ nav{
     height: var(--alturaCard);
 
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
 
     color: var(--corText);
-    font-size:1.5rem;
+    font-size: 1.5rem;
 
-     border-radius: 8px;
+    border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
 
@@ -243,12 +239,14 @@ nav{
 .cards:hover{
     width: calc(var(--larguraCard) + 2.5vw);
     height: calc(var(--alturaCard) + 2.5vh);
+    
     translate: 0 -4vh;
 }
 
 #personagensTitulo{
     display: flex;
-    align-self: flex-start;
+        align-self: flex-start;
+    
     padding-bottom: 2vh;
     margin-left: 6vh;
 }
@@ -257,8 +255,8 @@ nav{
     width: 100%;
 
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+        justify-content: space-around;
+        align-items: center;
     gap: 50px;
 }
 
@@ -290,8 +288,8 @@ nav{
 
 #secPersonagensTyler{
     background: 
-    radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
-    url(./imgs/ftTylerPersopg);
+        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        url(./imgs/ftTylerPersopg);
     background-size: cover;
     background-position: center;
     padding-top:10vh;
@@ -299,9 +297,9 @@ nav{
 
 #secPersonagensNarrador{
 
-     background: 
-    radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
-    url(./imgs/ftNarradorPersopg);
+    background: 
+        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        url(./imgs/ftNarradorPersopg);
     background-size: cover;
     background-position: center;
 }
