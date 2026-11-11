@@ -1,0 +1,318 @@
+:root{
+    --corbackgroundSecBase: #5C6B7A;
+    --corBackgroundHeaderCards: #07080D;
+    --corBackgroundBoxInfos: #1A1A1A;
+    --corText: #FEFEFF;
+    --tamanhoFontePgTitulo:4vw;
+    --tamanhoFontePgSubtitulo: 2vw;
+    --alturaCard: 70vh;
+    --larguraCard: 25vw;
+    --alturaImgCard: 38vh;
+    --larguraImgCard: 18vw;
+    --fontBabas: 'Bebas Neue', sans-serif;
+    --fontOswald: 'Oswald', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.pgTitulo{
+    color: var(--corText);
+    font-size: var(--tamanhoFontePgTitulo);
+    font-family: var(--fontBabas);
+    font-weight: normal;
+    margin-left:5vw;
+
+}
+
+.pgSubtitulo{
+    color: var(--corText);
+    font-size: var(--tamanhoFontePgSubtitulo);
+    font-family: var(--fontOswald);
+    font-weight: normal;
+    margin-left:5vw;
+}
+
+.infosBox{
+    background-color: var(--corBackgroundBoxInfos);
+    
+    width: 36vw;
+    min-width: 320px;
+    max-width: 480px;
+    padding: 2rem;
+    border-radius: 8px;
+    
+    color: var(--corText);
+    
+    margin-right: 3vw;
+
+    justify-self: flex-end;
+    align-self: center;
+}
+
+section{
+    height: 100vh;
+    width: 100%;
+    border-bottom: 0.5rem solid #222222;
+
+    scroll-margin-top: 10vh;
+    padding-top: 5vh;
+}
+
+
+header{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    
+    background-color:#1A1A1A;
+    color: var(--corText);
+    border-bottom: 2px solid #222222;
+    height: 80px;
+    width: 100%;
+    
+    display: flex;
+        align-items: center;
+
+
+}
+
+#mainHeader{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logoProdutora{
+    width: 120px;
+    height: 60px;
+    margin-left: 20px;
+    background-color: red;
+
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 3vw;
+    font-size: 1.5rem;
+}
+
+#secHome{
+    margin-top: 10vh;
+    height: 90vh;
+
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.50) 500px, #1a1a1a), 
+        url(./imgs/ftHome.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center 10vh;
+    
+    display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+}
+
+#mainHome{
+
+    margin-left: 80px;
+    margin-bottom: 50px;
+    text-align: left;
+
+}
+
+#homeTitulo{
+
+    font-size: 6vw;
+    margin:0px;
+
+}
+
+#homeSubtitulo{
+    margin:0px;
+    font-size: 2vw;
+}
+
+#secFilme{
+    background:
+    radial-gradient(rgba(0, 0, 0, 0.50) 500px, #222222),
+    url(./imgs/galpao.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+}
+
+#filmeTitulo{
+    margin-bottom: 2vh;
+}
+
+#infosFilme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#bannerFilme{
+
+    width: 25vw;
+    max-width: 320px;
+    min-width: 220px;
+
+    height: 65vh;
+    min-height: 380px;
+    max-height: 520px;
+
+    background-image: url(imgs/ftCapa.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+
+    transition: transform 0.3s ease;
+
+    margin-left: 6.5vw;
+
+
+}
+
+#bannerFilme:hover{
+    transform:scale(1.02);
+}
+
+#infosBoxFilme{
+    height: 65vh;
+}
+
+#secPersonagens{
+
+
+    background:
+        radial-gradient(rgba(0, 0, 0, 0.50) 500px, black), 
+        url(./imgs/ftfundoPersonagens.jpeg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center 10vh;
+    
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+
+}
+
+.cards{
+    width: var(--larguraCard);
+    height: var(--alturaCard);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    color: var(--corText);
+    font-size:1.5rem;
+
+     border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+
+    transition: transform 1s ease;
+}
+
+.cards:hover{
+    width: calc(var(--larguraCard) + 2.5vw);
+    height: calc(var(--alturaCard) + 2.5vh);
+    translate: 0 -4vh;
+}
+
+#personagensTitulo{
+    display: flex;
+    align-self: flex-start;
+    padding-bottom: 2vh;
+    margin-left: 6vh;
+}
+
+#cardsPersonagens{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
+#cardTyler{
+    background-image: url(imgs/ftTylerPersoCard.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#cardNarrador{
+    background-image: url(imgs/ftcardNarrador.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#cardMarla{
+    background-image: url(imgs/ftMarlaPersoCard.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.citacoes{
+    text-align: center;
+    padding-top: 15px;
+}
+
+#secPersonagensTyler{
+    background: 
+    radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+    url(./imgs/ftTylerPersopg);
+    background-size: cover;
+    background-position: center;
+    padding-top:10vh;
+}
+
+#secPersonagensNarrador{
+
+     background: 
+    radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+    url(./imgs/ftNarradorPersopg);
+    background-size: cover;
+    background-position: center;
+}
+
+#secPersonagensNarrador .infosBox{
+    margin-left: 2.8vw;
+
+    justify-self: flex-start;
+}
+
+
+
+
+
