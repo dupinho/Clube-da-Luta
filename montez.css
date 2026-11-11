@@ -249,13 +249,11 @@ footer{
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
 
-    transition: transform 1s ease;
+    transition: transform 0.8s ease;
 }
 
 .cards:hover{
-    width: calc(var(--larguraCard) + 2.5vw);
-    height: calc(var(--alturaCard) + 2.5vh);
-    
+    transform: scale(1.02);
     translate: 0 -4vh;
 }
 
