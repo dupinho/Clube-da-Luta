@@ -159,13 +159,12 @@ footer{
 }
 
 #homeTitulo{
-    font-size: 6vw;
+    font-size: calc(var(--tamanhoFontePgTitulo) * 1.5);
     margin:0px;
 }
 
 #homeSubtitulo{
     margin:0px;
-    font-size: 2vw;
 }
 
 #secFilme{
@@ -250,6 +249,23 @@ footer{
         align-items: center;
 }
 
+#personagensTitulo{
+    display: flex;
+        align-self: flex-start;
+    
+    padding-bottom: 2vh;
+    margin-left: 6vh;
+}
+
+#cardsPersonagens{
+    width: 100%;
+
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+    gap: 50px;
+}
+
 .cards{
     width: var(--larguraCard);
     height: var(--alturaCard);
@@ -271,23 +287,6 @@ footer{
 
 .cards:hover{
     transform: scale(1.06);
-}
-
-#personagensTitulo{
-    display: flex;
-        align-self: flex-start;
-    
-    padding-bottom: 2vh;
-    margin-left: 6vh;
-}
-
-#cardsPersonagens{
-    width: 100%;
-
-    display: flex;
-        justify-content: space-around;
-        align-items: center;
-    gap: 50px;
 }
 
 #cardTyler{
@@ -476,6 +475,7 @@ footer{
 @media (max-width: 767px){
     header{
         height: 12.5vh;
+        padding-top: 2.5vh;
     }
 
     nav{
@@ -491,11 +491,22 @@ footer{
     }
 
     h1{
-        padding-top: 6.25vh;
+        padding-top: 2.5vh;
     }
 
     footer{
         height: 60vh;
+    }
+
+    #mainHeader{
+        padding-top: 5vw;
+        padding-right: 15vw;
+
+        gap: 15vw;
+    }
+
+    .navsBtn{
+        padding: 0.5vw;
     }
 
     #logoProdutora{
@@ -503,6 +514,118 @@ footer{
         height: 50px;
 
         margin-left: 15px;
+        margin-bottom: 1.5vh;
+    }
+
+    .pgTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+    }
+
+    .pgSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+    }
+
+    #secHome{
+        background:
+            url(./imgs/ftHomeMobile.jpg);
+        background-position: 40% -40vh;
+
+            justify-content: center;
+            align-items: center;
+    }
+
+    #mainHome{
+        margin-left: 0;
+        margin-bottom: 85%;
+        text-align: center;
+    }
+
+    #homeTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 3.2);
+    }
+
+    #homeSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.7);
+    }
+
+    #filmeTitulo{
+        justify-self: center;
+        
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+
+        margin-left: 0;
+        margin-bottom: 1vh;
+    }
+
+    #infosFilme{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    }
+
+    #bannerFilme{
+        height: 15vh;/*! 30vh */
+
+        margin-left: 0;
+        margin-bottom: 2.5vh;
+    }
+
+    .infosbox{
+        width: 60vw;
+        height: 10vh;
+
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    #infosBoxFilme{
+        height: 30vh;
+        width: 90vw;
+
+        padding-top: 0;
+        font-size: 0.8rem;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+    }
+
+    #secPersonagens{
+            justify-content: center;
+    }
+
+    #personagensTitulo{
+        align-self: center;
+
+        margin-left: 0;
+        margin-bottom: 1vh;
+    }
+
+    #cardsPersonagens{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 2.5vh;
+    }
+    
+    .cards{
+        width: 80vw;
+        height: 22.5vh;
+
+        font-size: 1rem;
+    }
+
+    /** configurar em outro momento a forma das imagens dentro dos cards */
+
+    #cardNarrador{
+        background-position: center 30%;
+    }
+
+    #cardMarla{
+        margin-bottom: 3.5vh;
     }
 }
 
