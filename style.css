@@ -31,7 +31,7 @@ body::-webkit-scrollbar{
 
 header{
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     
@@ -266,12 +266,11 @@ footer{
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
 
-    transition: transform 0.8s ease;
+    transition: transform 0.3s ease;
 }
 
 .cards:hover{
-    transform: scale(1.02);
-    translate: 0 -4vh;
+    transform: scale(1.06);
 }
 
 #personagensTitulo{
@@ -404,6 +403,15 @@ footer{
 }
 #ftGaleria6 {
     grid-area: 6 / 7 / 8 / 10;
+}
+
+.ftGal{
+    transition: transform 0.3s ease;
+}
+
+.ftGal:hover{
+    transform: scale(1.04);
+    z-index: 1;
 }
 
 #secAvaliacao{

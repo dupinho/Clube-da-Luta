@@ -11,15 +11,16 @@
         aguardando = false;
     }
 
-    function aoRolar(){
+    function qndRola(){
         if (!aguardando){
             aguardando = true;
-            
+
             requestAnimationFrame(atualizaProg);
         }
     }
 
-    window.addEventListener("scroll", aoRolar, { passive: true });
-    window.addEventListener("resize", aoRolar);
+    window.addEventListener("scroll", qndRola, { passive: true });
+    window.addEventListener("resize", qndRola);
+    
     atualizaProg();
 })();
