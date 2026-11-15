@@ -321,7 +321,7 @@ footer{
         url(./imgs/ftTylerPersopg);
     background-size: cover;
     background-position: center;
-    padding-top:10vh;
+    padding-top: 10vh;
 }
 
 #secPersonagensNarrador{
@@ -627,6 +627,97 @@ footer{
     #cardMarla{
         margin-bottom: 3.5vh;
     }
+
+    /*! talvez tenha que ajustar o tamanho do padding do citacoes */
+
+    .citacoes{
+        padding-top: 0;
+    }
+
+    #secPersonagensTyler{
+        padding-top: 0;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background:
+            radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+            url(./imgs/ftTylerPersopgMobile.jfif);
+        background-position: 70% center;
+        background-size: cover;
+    }
+
+    #persoTylerTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    }
+
+    #persoTylerSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
+
+        margin-bottom: 22vh;
+    }
+
+    #boxTyler{
+        width: 80vw;
+        height: 35vh;
+
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-right: 0;
+
+        font-size: 1rem;
+    }
+
+    #boxTyler > .citacoes{
+        padding-top: 5px;
+
+        font-size: 1.2rem;
+    }
+
+    #secPersonagensNarrador{
+        padding-top: 0;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background:
+            radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+            url(./imgs/ftNarraPersopgMobile.jfif);
+        background-position: 70% center;
+        background-size: cover;
+    }
+
+    #persoNarraTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    }
+
+    #persoNarraSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
+
+        margin-bottom: 33vh;
+    }
+
+    #boxNarrador{
+        width: 80vw;
+        height: 30vh;
+
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-right: 0;
+
+        font-size: 1rem;
+    }
+
+    #boxNarrador > .citacoes{
+        padding-top: 5px;
+
+        font-size: 1.2rem;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1199px){}
