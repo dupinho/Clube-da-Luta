@@ -718,6 +718,81 @@ footer{
         font-size: 1.2rem;
     }
 
+    #secPersonagensMarla{
+        padding-top: 0;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background:
+            radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+            url(./imgs/ftMarlaPersopgMobile.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #persoMarlaTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    }
+
+    #persoMarlaSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
+
+        margin-bottom: 32vh;
+    }
+
+    #boxMarla{
+        width: 80vw;
+        height: 30vh;
+
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 4vh;
+
+        font-size: 1rem;
+    }
+
+    #boxMarça > .citacoes{
+        padding-top: 5px;
+
+        font-size: 1.2rem;
+    }
+
+    #galeriaTitulo{
+        margin-top: -2.2vh;
+        margin-bottom: 1vh;
+    }
+
+    #ftsGaleriaOrg{
+        display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+    }
+
+    #ftGaleria1{
+        grid-area: 6 / 2 / 10 / 3;
+    }
+    #ftGaleria2{
+        grid-area: 1 / 2 / 3 / 3;
+    }
+    #ftGaleria3{
+        grid-area: 7 / 1 / 10 / 2;
+    }
+    #ftGaleria4{
+        grid-area: 5 / 1 / 7 / 2;
+    }
+    #ftGaleria5{
+        grid-area: 1 / 1 / 5 / 2;
+    }
+    #ftGaleria6{
+        grid-area: 3 / 2 / 6 / 3;
+    }
+    
 }
 
 @media (min-width: 768px) and (max-width: 1199px){}
