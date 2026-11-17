@@ -425,14 +425,25 @@ footer{
 
 #secAvaliacao .infosBox{
     margin-top: 9.2vh;
-    margin-bottom: 9.2vh; /*? isso provavelmente vai mudar quando a gente fizer as estrelinhas*/
+    margin-bottom: 5.5vh; /*? isso provavelmente vai mudar quando a gente fizer as estrelinhas*/
     margin-right: 8vw;
 
     width: 28vw;
-    height: 50vh;
+    height: 53.7vh;
 
     font-size: 1.2rem;
 }
+
+.estrelas {
+    display: block;
+    width: 100%;
+    margin-top: 0.2rem;
+    text-align: center;
+
+    color: #ffc107;
+    font-size: 32px;
+}
+
 
 #navFooter{
     display: flex;
