@@ -157,13 +157,12 @@ footer{
 }
 
 #homeTitulo{
-    font-size: 6vw;
+    font-size: calc(var(--tamanhoFontePgTitulo) * 1.5);
     margin:0px;
 }
 
 #homeSubtitulo{
     margin:0px;
-    font-size: 2vw;
 }
 
 #secFilme{
@@ -253,6 +252,23 @@ footer{
         align-items: center;
 }
 
+#personagensTitulo{
+    display: flex;
+        align-self: flex-start;
+    
+    padding-bottom: 2vh;
+    margin-left: 6vh;
+}
+
+#cardsPersonagens{
+    width: 100%;
+
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+    gap: 50px;
+}
+
 .cards{
     width: var(--larguraCard);
     height: var(--alturaCard);
@@ -275,23 +291,6 @@ footer{
 
 .cards:hover{
     transform: scale(1.06);
-}
-
-#personagensTitulo{
-    display: flex;
-        align-self: flex-start;
-    
-    padding-bottom: 2vh;
-    margin-left: 6vh;
-}
-
-#cardsPersonagens{
-    width: 100%;
-
-    display: flex;
-        justify-content: space-around;
-        align-items: center;
-    gap: 50px;
 }
 
 #cardTyler{
@@ -326,7 +325,7 @@ footer{
         url(./imgs/ftTylerPersopg);
     background-size: cover;
     background-position: center;
-    padding-top:10vh;
+    padding-top: 10vh;
 }
 
 #secPersonagensNarrador{
@@ -429,10 +428,27 @@ footer{
 }
 
 #secAvaliacao .infosBox{
+    margin-top: 9.2vh;
+    margin-bottom: 5.5vh; /*? isso provavelmente vai mudar quando a gente fizer as estrelinhas*/
+    margin-right: 8vw;
+
+    width: 28vw;
+    height: 53.7vh;
 
     margin-top: 9vh;
     font-size: 1.5rem;
 }
+
+.estrelas {
+    display: block;
+    width: 100%;
+    margin-top: 0.2rem;
+    text-align: center;
+
+    color: #ffc107;
+    font-size: 32px;
+}
+
 
 #navFooter{
     display: flex;
@@ -474,6 +490,330 @@ footer{
 }
 
 #textoFooter{
-    font-size: 1.5rem;
-    margin-bottom: 2vh;
+    font-size: 1.25rem;
 }
+
+@media (max-width: 767px){
+    header{
+        height: 12.5vh;
+        padding-top: 2.5vh;
+    }
+
+    nav{
+        gap: 1.5vw;
+
+        font-size: 1rem;
+    }
+
+    section{
+        height: 87.5vh;
+
+        scroll-margin-top: 12.5vh;
+    }
+
+    h1{
+        padding-top: 2.5vh;
+    }
+
+    footer{
+        height: 60vh;
+    }
+
+    #mainHeader{
+        padding-top: 5vw;
+        padding-right: 15vw;
+
+        gap: 15vw;
+    }
+
+    .navsBtn{
+        padding: 0.5vw;
+    }
+
+    #logoProdutora{
+        width: 75px;
+        height: 50px;
+
+        margin-left: 15px;
+        margin-bottom: 1.5vh;
+    }
+
+    .pgTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+    }
+
+    .pgSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+    }
+
+    #secHome{
+        background:
+            url(./imgs/ftHomeMobile.jpg);
+        background-position: 40% -40vh;
+
+            justify-content: center;
+            align-items: center;
+    }
+
+    #mainHome{
+        margin-left: 0;
+        margin-bottom: 85%;
+        text-align: center;
+    }
+
+    #homeTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 3.2);
+    }
+
+    #homeSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.7);
+    }
+
+    #filmeTitulo{
+        justify-self: center;
+        
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+
+        margin-left: 0;
+        margin-bottom: 1vh;
+    }
+
+    #infosFilme{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    }
+
+    #bannerFilme{
+        height: 15vh;/*! 30vh */
+
+        margin-left: 0;
+        margin-bottom: 2.5vh;
+    }
+
+    .infosbox{
+        width: 60vw;
+        height: 10vh;
+
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    #infosBoxFilme{
+        height: 30vh;
+        width: 90vw;
+
+        padding-top: 0;
+        font-size: 0.8rem;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+    }
+
+    #secPersonagens{
+            justify-content: center;
+    }
+
+    #personagensTitulo{
+        align-self: center;
+
+        margin-left: 0;
+        margin-bottom: 1vh;
+    }
+
+    #cardsPersonagens{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 2.5vh;
+    }
+    
+    .cards{
+        width: 80vw;
+        height: 22.5vh;
+
+        font-size: 1rem;
+    }
+
+    /** configurar em outro momento a forma das imagens dentro dos cards */
+
+    #cardNarrador{
+        background-position: center 30%;
+    }
+
+    #cardMarla{
+        margin-bottom: 3.5vh;
+    }
+
+    /*! talvez tenha que ajustar o tamanho do padding do citacoes */
+
+    .citacoes{
+        padding-top: 0;
+    }
+
+    #secPersonagensTyler{
+        padding-top: 0;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background:
+            radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+            url(./imgs/ftTylerPersopgMobile.jfif);
+        background-position: 70% center;
+        background-size: cover;
+    }
+
+    #persoTylerTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    }
+
+    #persoTylerSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
+
+        margin-bottom: 22vh;
+    }
+
+    #boxTyler{
+        width: 80vw;
+        height: 35vh;
+
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-right: 0;
+
+        font-size: 1rem;
+    }
+
+    #boxTyler > .citacoes{
+        padding-top: 5px;
+
+        font-size: 1.2rem;
+    }
+
+    #secPersonagensNarrador{
+        padding-top: 0;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background:
+            radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+            url(./imgs/ftNarraPersopgMobile.jfif);
+        background-position: 70% center;
+        background-size: cover;
+    }
+
+    #persoNarraTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    }
+
+    #persoNarraSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
+
+        margin-bottom: 33vh;
+    }
+
+    #boxNarrador{
+        width: 80vw;
+        height: 30vh;
+
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-right: 0;
+
+        font-size: 1rem;
+    }
+
+    #boxNarrador > .citacoes{
+        padding-top: 5px;
+
+        font-size: 1.2rem;
+    }
+
+    #secPersonagensMarla{
+        padding-top: 0;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background:
+            radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+            url(./imgs/ftMarlaPersopgMobile.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    #persoMarlaTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    }
+
+    #persoMarlaSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
+
+        margin-bottom: 32vh;
+    }
+
+    #boxMarla{
+        width: 80vw;
+        height: 30vh;
+
+        margin-top: 10vh;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 4vh;
+
+        font-size: 1rem;
+    }
+
+    #boxMarça > .citacoes{
+        padding-top: 5px;
+
+        font-size: 1.2rem;
+    }
+
+    #galeriaTitulo{
+        margin-top: -2.2vh;
+        margin-bottom: 1vh;
+    }
+
+    #ftsGaleriaOrg{
+        display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+    }
+
+    #ftGaleria1{
+        grid-area: 6 / 2 / 10 / 3;
+    }
+    #ftGaleria2{
+        grid-area: 1 / 2 / 3 / 3;
+    }
+    #ftGaleria3{
+        grid-area: 7 / 1 / 10 / 2;
+    }
+    #ftGaleria4{
+        grid-area: 5 / 1 / 7 / 2;
+    }
+    #ftGaleria5{
+        grid-area: 1 / 1 / 5 / 2;
+    }
+    #ftGaleria6{
+        grid-area: 3 / 2 / 6 / 3;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1199px){}
