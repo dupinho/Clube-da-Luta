@@ -39,7 +39,7 @@ header{
     color: var(--corText);
     border-bottom: 2px solid #222222;
     
-    height: 80px;
+    height: 10vh;
     width: 100%;
     
     display: flex;
@@ -233,7 +233,11 @@ footer{
 }
 
 #infosBoxFilme{
-    height: 65vh;
+    height: 45vh;
+}
+
+#tituloResumo{
+    padding-top: 0;
 }
 
 #secPersonagens{
@@ -597,6 +601,10 @@ footer{
             justify-content: center;
             align-items: center;
             text-align: center;
+    }
+
+    #tituloResumo{
+        padding-top: 2.5vh;
     }
 
     #secPersonagens{
