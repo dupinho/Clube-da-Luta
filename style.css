@@ -207,7 +207,7 @@ footer{
 
     transition: transform 0.3s ease;
 
-    margin-left: 6.5vw;
+    margin-left: 5vw;
 }
 
 #bannerFilme:hover{
@@ -233,7 +233,7 @@ footer{
 }
 
 #infosBoxFilme{
-    height: 45vh;
+    height: fit-content;
 }
 
 #tituloResumo{
@@ -339,6 +339,7 @@ footer{
 
 #secPersonagensNarrador .infosBox{
     margin-left: 2.8vw;
+    margin-top: 5vh;
 
     justify-self: flex-start;
 }
@@ -354,7 +355,8 @@ footer{
 #secGaleria{
     height: 90vh;
     
-    background-color: var(--corBackgroundHeaderCards);
+    background:radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        url(./imgs/GaleriaBackground.jpeg);
     
     display: flex;
         flex-direction: column;
