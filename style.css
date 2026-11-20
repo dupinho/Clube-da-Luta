@@ -424,7 +424,7 @@ footer{
         radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftPlot);
     background-size: cover;
-    background-position: center -20vh;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -1112,6 +1112,43 @@ footer{
     }
     #ftGaleria6{
         grid-area: 7 / 3 / 10 / 4;
+    }
+
+    #secAvaliação{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background-size: cover;
+        background-position: center center;/* center provisorio, depois arrumar um jeito de dx o centro dele mais pra baixo */
+    }
+
+    #avaliacaoTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
+
+            justify-self: center;
+
+        padding-top: 2.5vh;
+    }
+
+    #infosBoxAval{
+        height: 30vh;
+        width: 90vw;
+
+        margin-top: 40vh;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 5vh;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+    }
+
+    .txtAval{
+        font-size: 1.3rem;
     }
 
 }
