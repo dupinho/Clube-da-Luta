@@ -1028,6 +1028,90 @@ footer{
 
     #tituloResumo{
         padding-top: 0;
-        text-align: center;
+        
+            text-align: center;
     }
+
+    #personagensTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
+        
+        padding-top: 1.5vh;
+        margin-left: 0;
+
+            align-self: center;
+    }
+
+    #personagensTitulo{
+        align-self: center;
+
+        margin-left: 0;
+        margin-bottom: 1vh;
+    }
+
+    #cardsPersonagens{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        gap: 2.5vh;
+    }
+    
+    .cards{
+        width: 80vw;
+        height: 22.5vh;
+
+        font-size: 1rem;
+    }
+
+    /** configurar em outro momento a forma das imagens dentro dos cards */
+
+    #cardTyler{
+    margin-top: -2vh;
+    }
+
+    #cardNarrador{
+        background-position: center 35%;
+    }
+
+    #cardMarla{
+        margin-bottom: 5vh;
+    }
+
+    /*! fazer a diagramação da pagina de cada personagem, tentar manter as mesmas fotos do desktop */
+
+    #galeriaTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
+
+        margin-top: -2.2vh;
+        margin-bottom: 1vh;
+    }
+
+    #ftsGaleriaOrg{
+        display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            grid-column-gap: 12px;
+            grid-row-gap: 12px;
+    }
+
+    #ftGaleria1{
+        grid-area: 1 / 1 / 4 / 3;
+    }
+    #ftGaleria2{
+        grid-area: 1 / 3 / 4 / 4;
+    }
+    #ftGaleria3{
+        grid-area: 4 / 2 / 7 / 4;
+    }
+    #ftGaleria4{
+        grid-area: 4 / 1 / 7 / 2;
+    }
+    #ftGaleria5{
+        grid-area: 7 / 1 / 10 / 3;
+    }
+    #ftGaleria6{
+        grid-area: 7 / 3 / 10 / 4;
+    }
+
 }
