@@ -1080,6 +1080,111 @@ footer{
 
     /*! fazer a diagramação da pagina de cada personagem, tentar manter as mesmas fotos do desktop */
 
+    .persoPg{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        background-size: cover;
+        background-position: center center;/* center provisorio, depois arrumar um jeito de dx o centro dele mais pra baixo */
+    }
+
+    #persoTylerTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+
+            justify-self: center;
+
+        margin-top: -10vh;
+    }
+
+    #persoTylerSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+
+            justify-self: center;
+    }
+
+    #boxTyler{
+        height: 35vh;
+        width: 90vw;
+
+        margin-top: 37.5vh;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 5vh;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        font-size: 1.3rem;
+    }
+
+    #persoNarraTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+
+            justify-self: center;
+
+        margin-top: -10vh;
+    }
+
+    #persoNarraSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+
+            justify-self: center;
+    }
+        /*? dar um jeito de centralizar horizontalmente */
+    #boxNarrador{
+        height: 35vh;
+        width: 90vw;
+
+        margin-top: 37.5vh;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 5vh;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        font-size: 1.3rem;
+    }
+
+    #persoMarlaTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+
+            justify-self: center;
+
+        margin-top: -10vh;
+    }
+
+    #persoMarlaSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+
+            justify-self: center;
+    }
+
+    #boxMarla{
+        height: 35vh;
+        width: 90vw;
+
+        margin-top: 37.5vh;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 5vh;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        font-size: 1.3rem;
+    }
+
     #galeriaTitulo{
         font-size: calc(var(--tamanhoFontePgTitulo) * 3);
 
