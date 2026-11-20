@@ -1151,4 +1151,24 @@ footer{
         font-size: 1.3rem;
     }
 
+    #navFooter{
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+
+        width: 100%;
+        
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+        
+        gap: 1vw;
+    }
+
+    #navFooter h3{
+        margin: 2vh 0;
+        
+        white-space: nowrap;
+    }
+
 }
