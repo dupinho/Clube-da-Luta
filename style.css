@@ -281,7 +281,6 @@ footer{
 
     color: var(--corText);
     font-size: 1.5rem;
-    text-align: center;
 
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.1);
@@ -908,4 +907,36 @@ footer{
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199px){}
+@media (min-width: 768px) and (max-width: 1199px){
+    header{
+        height: 10vh;
+    }
+
+    #mainHeader{
+        width: 100%;
+        
+        padding: 0 2vw;
+        gap: 12vw;
+    }
+
+    #logoProdutora{
+        width: 116.5px;
+        height: 60px;
+        
+        margin-left: 4vw;
+    }
+
+    nav{
+        width: 72%;
+    
+        gap: 1.6vw;
+    
+            justify-content: flex-end;
+        
+        font-size: 1.75rem;
+    }
+
+    .navsBtn{
+        white-space: nowrap;
+    }
+}
