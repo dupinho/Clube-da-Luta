@@ -958,7 +958,8 @@ footer{
     #mainHome{
         margin-left: 0;
         margin-bottom: 0;
-        text-align: center;
+        
+            text-align: center;
     }
 
     #homeTitulo{
@@ -971,5 +972,62 @@ footer{
         font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
 
         margin:0px;
+    }
+
+    #filmeTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
+        
+        margin-left: 0;
+        margin-bottom: 1vh;
+        
+            text-align: center;
+    }
+
+    #infosFilme{
+        height: 78vh;
+
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        
+        gap: 2vh;
+    }
+
+    #bannerFilme{
+        width: 42.5vw;
+        height: 50vh;
+
+        min-height: 0;
+        max-height: 380px;
+        
+        margin-top: 1vh;
+        margin-left: 0;
+        
+        background-size: cover;
+        background-position: center;
+    }
+
+    #infosBoxFilme{
+        width: 80vw;
+        height: 36vh;
+
+        min-width: 0;
+        max-width: 800px;
+        
+        min-height: 0;
+        max-height: 360px;
+        
+        margin-right: 0;
+        padding: 1.25rem;
+        
+        overflow: auto;
+        
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    #tituloResumo{
+        padding-top: 0;
+        text-align: center;
     }
 }
