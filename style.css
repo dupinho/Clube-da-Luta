@@ -141,7 +141,7 @@ footer{
     height: 90vh;
 
     background:
-        radial-gradient(rgba(0, 0, 0, 0.50) 500px, #1a1a1a), 
+        radial-gradient(rgba(0, 0, 0, -0.50) 500px, #1a1a1a), 
         url(./imgs/ftHome.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -169,7 +169,7 @@ footer{
 
 #secFilme{
     background:
-        radial-gradient(rgba(0, 0, 0, 0.50) 500px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 500px, #222222),
         url(./imgs/galpao.jfif);
     background-size: cover;
     background-repeat: no-repeat;
@@ -242,7 +242,7 @@ footer{
 
 #secPersonagens{
     background:
-        radial-gradient(rgba(0, 0, 0, 0.50) 500px, black), 
+        radial-gradient(rgba(0, 0, 0, -0.50) 500px, black), 
         url(./imgs/ftfundoPersonagens.jpeg);
         background-size: cover;
         background-attachment: fixed;
@@ -281,7 +281,6 @@ footer{
 
     color: var(--corText);
     font-size: 1.5rem;
-    text-align: center;
 
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.1);
@@ -322,7 +321,7 @@ footer{
 
 #secPersonagensTyler{
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftTylerPersopg);
     background-size: cover;
     background-position: center;
@@ -331,7 +330,7 @@ footer{
 
 #secPersonagensNarrador{
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftNarradorPersopg);
     background-size: cover;
     background-position: center;
@@ -345,7 +344,7 @@ footer{
 
 #secPersonagensMarla{
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftMarlaPersopg);
     background-size: cover;
     background-position: center;
@@ -422,10 +421,11 @@ footer{
     height: 90vh;
 
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftPlot);
     background-size: cover;
     background-position: center -20vh;
+    background-repeat: no-repeat;
 }
 
 #secAvaliacao .infosBox{
@@ -908,4 +908,126 @@ footer{
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199px){}
+@media (min-width: 768px) and (max-width: 1199px){
+    header{
+        height: 10vh;
+    }
+
+    #mainHeader{
+        width: 100%;
+        
+        padding: 0 2vw;
+        gap: 12vw;
+    }
+
+    #logoProdutora{
+        width: 116.5px;
+        height: 60px;
+        
+        margin-left: 4vw;
+    }
+
+    nav{
+        width: 72%;
+    
+        gap: 5vw;
+    
+            justify-content: flex-end;
+        
+        font-size: 1.75rem;
+    }
+
+    .navsBtn{
+        white-space: nowrap;
+    }
+
+    #secHome{
+        background:
+            radial-gradient(rgba(0, 0, 0, -10) 500px, #1a1a1a),
+            url(./imgs/ftHomeMobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    }
+
+    #mainHome{
+        margin-left: 0;
+        margin-bottom: 0;
+        
+            text-align: center;
+    }
+
+    #homeTitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 5);
+
+        margin:0px;
+    }
+
+    #homeSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+
+        margin:0px;
+    }
+
+    #filmeTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
+        
+        margin-left: 0;
+        margin-bottom: 1vh;
+        
+            text-align: center;
+    }
+
+    #infosFilme{
+        height: 78vh;
+
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        
+        gap: 2vh;
+    }
+
+    #bannerFilme{
+        width: 42.5vw;
+        height: 50vh;
+
+        min-height: 0;
+        max-height: 380px;
+        
+        margin-top: 1vh;
+        margin-left: 0;
+        
+        background-size: cover;
+        background-position: center;
+    }
+
+    #infosBoxFilme{
+        width: 80vw;
+        height: 36vh;
+
+        min-width: 0;
+        max-width: 800px;
+        
+        min-height: 0;
+        max-height: 360px;
+        
+        margin-right: 0;
+        padding: 1.25rem;
+        
+        overflow: auto;
+        
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    #tituloResumo{
+        padding-top: 0;
+        text-align: center;
+    }
+}
