@@ -1117,6 +1117,14 @@ footer{
         font-size: 1.3rem;
     }
 
+    #secPersonagensNarrador{
+        background-image: url(./imgs/ftNarraPersopgMobile.jfif);
+    }
+
+    #secPersonagensNarrador .infosBox{
+        margin-left: 20vw;
+    }
+
     #persoNarraTitulo{
         font-size: calc(var(--tamanhoFontePgTitulo) * 2);
 
@@ -1136,9 +1144,7 @@ footer{
         width: 90vw;
 
         margin-top: 37.5vh;
-        margin-right: auto;
-        margin-left: auto;
-        padding-top: 5vh;
+        padding-top: 2vh;
 
         display: flex;
             flex-direction: column;
