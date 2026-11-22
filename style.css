@@ -90,6 +90,12 @@ textarea{
     margin-bottom: 3vh;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 footer{
     width: 100%;
     height: 50vh;
@@ -453,7 +459,49 @@ footer{
 }
 
 #secSobreNos{
-    background-color: aqua;
+    background-color: #0D0D0D;
+
+    display: flex;
+        flex-direction: column;
+        align-content: center;
+}
+
+#sobreTitulo{
+        align-self: center;
+
+    margin-left: 0;
+    padding-top: 3vh;
+}
+
+#infosSobre{
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15vh;
+}
+
+#ftLogo{
+    height: 60vh;
+    width: 60vh;
+
+    background-image: url(./imgs/logoMoinho.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding-top: 6vh;
+    margin-top: 2.5vh;
+    margin-left: 0;
+
+        align-self: center;
+}
+
+#infosBoxSobre{
+    height: 30vh;
+    
+    margin-top: 3vh;
+
+    text-align: center;
 }
 
 #secFeedback{
