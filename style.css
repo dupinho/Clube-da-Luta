@@ -632,7 +632,7 @@ footer{
     nav{
         gap: 1.5vw;
 
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     section{
@@ -643,6 +643,17 @@ footer{
 
     h1{
         padding-top: 2.5vh;
+    }
+
+    label{
+        margin-top: 0.5;
+        margin-bottom: 1.5vh;
+
+        font-size: 2vh;
+    }
+
+    textarea{
+        margin-bottom: 2vh;
     }
 
     footer{
@@ -981,6 +992,61 @@ footer{
 
     .txtAval{
         font-size: 1.3rem;
+    }
+
+    #infosSobre{
+        display: flex;
+            flex-direction: column;
+
+        gap: 2vh;
+    }
+
+    #ftLogo{
+        height: 30vh;
+        width: 30vh;
+    }
+
+    #infosBoxSobre{
+        height: 27.5vh;
+
+        margin-bottom: 5vh;
+    }
+
+    #secFeedback{
+        background-image: url(./imgs/ftfundoPersonagens2.jpeg);
+        background-position: center center;
+
+        height: auto;
+        min-height: 70vh;
+    }
+
+    #feedbackTitulo{
+        width: 85vw;
+        padding-top: 1vh;
+        text-align: center;
+    }
+
+    #infosFeedback{
+        display: flex;
+            flex-direction: column;
+
+        gap: 2vh;
+    }
+
+    #boxFeedback{
+        height: 20vh;
+        width: 30vh;
+
+        padding-top: 2vh;
+
+        font-size: 2vh;
+    }
+
+    #boxFormsFeedback{
+        height: 27.5vh;
+
+        margin-bottom: 5vh;
+        padding: 1.5vh;
     }
 
     #navFooter{
