@@ -28,6 +28,7 @@
                 <h3 class="navsBtn"><a href="#secPersonagens">PERSONAGENS</a></h3>
                 <h3 class="navsBtn"><a href="#secGaleria">GALERIA</a></h3>
                 <h3 class="navsBtn"><a href="#secAvaliacao">AVALIAÇÃO</a></h3>
+                <h3 class="navsBtn"><a href="#secFeedback">FEEDBACK</a></h3>
             </nav>
 
             <div class="barra" id="barraProg" aria-hidden="true"></div>
@@ -72,19 +73,22 @@
         </div>
     </section>
 
-    <section class="persoPG" id="secPersonagensTyler">
+    <section class="persoPg" id="secPersonagensTyler">
+        <div>
         <h1 class="pgTitulo" id="persoTylerTitulo">TYLER DURDEN</h1>
         <h3 class="pgSubtitulo" id="persoTylerSubtitulo">Brad Pitt</h3>
+        </div>
         <div class="infosBox" id="boxTyler">
             <p>Tyler Durden é o carismático e anárquico alter ego do narrador em Clube da Luta (1999), dirigido por David Fincher. Anticonsumista e provocador, ele encarna a revolta contra a vida vazia e o materialismo moderno. Brad Pitt deu vida ao personagem com uma atuação magnética, combinando charme, ironia e uma energia perigosa que transformou Tyler em um dos ícones mais marcantes do cinema. O papel consolidou Pitt como muito mais do que um galã de Hollywood, mostrando sua versatilidade como ator</p>
             <h2 class="citacoes">"As coisas que você possui acabam possuindo você"</h2>
         </div>
-        <div id="documentoTyler"></div>
     </section>
 
     <section class="persoPg" id="secPersonagensNarrador">
+        <div>
         <h1 class="pgTitulo" id="persoNarraTitulo">O NARRADOR</h1>
-        <h3 class="pgSubtitulo" id="persoNarraSubtitulo">EDWARD NORTON</h3>
+        <h3 class="pgSubtitulo" id="persoNarraSubtitulo">Edward Nortton</h3>
+        </div>
         <div class="infosBox" id="boxNarrador">
             <p>O narrador, vivido por Edward Norton, é um funcionário de escritório anônimo e insone, sufocado pela rotina e pelo consumismo, que busca sentido frequentando grupos de apoio e, depois, o clube da luta. Norton constrói o personagem com uma mistura de ironia seca, fragilidade e tensão crescente, tornando crível a fragmentação de uma mente dividida. Sua atuação sustenta o filme com a voz em off e uma vulnerabilidade que contrasta perfeitamente com o caos de Tyler.</p>
             <h2 class="citacoes">"Eu encontrei a liberdade. Perder toda a esperança era liberdade."</h2>
@@ -92,8 +96,10 @@
     </section>
 
     <section class="persoPg" id="secPersonagensMarla">
+        <div>
         <h1 class="pgTitulo" id="persoMarlaTitulo">MARLA SINGER</h1>
         <h3 class="pgSubtitulo" id="persoMarlaSubtitulo">Helena Bonham</h3>
+        </div>
         <div class="infosBox" id="boxMarla">
             <p>Marla Singer, interpretada por Helena Bonham Carter, é uma mulher desencantada e autodestrutiva que também frequenta grupos de apoio sem precisar deles, o que a torna um espelho incômodo para o narrador. Sarcástica, imprevisível e estranhamente honesta, ela traz humor sombrio e humanidade ao filme. Bonham Carter dá à personagem um magnetismo desgrenhado e melancólico, fazendo de Marla o contrapeso emocional da história..</p>
             <h2 class="citacoes"> "Quando as pessoas pensam que você está morrendo, elas realmente ouvem você..."</h2>
@@ -134,14 +140,33 @@
         </div>
     </section>
 
+    <!--? vou fazer uma section do sobre a moinho produções e depois tipo um newsletter pra enviarem feedback -->
+
+    <section id="secFeedback">
+        <h1 class="pgTitulo" id="feedbackTitulo">Feedback</h1>
+        <h3 class="pgSubtitulo" id="feedbackSubtitulo">Desperte seu alter-ego crítico e deixe sua avaliação! </h3>
+
+            <div class="infosBox" id="boxFormsFeedback">
+                <form action="https://formspree.io/f/mvkaweya" method="POST">
+                    <label>Seu email:</label>
+                        <input type="email" name="email">
+                    <label>Seu feedback:</label>
+                        <textarea name="message"></textarea>
+                    <button type="submit" id="btnEnviar">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <footer>
             <nav id="navFooter">
-                <h3><a href="#secHome">Clube da luta</a></h3>
+                <h3><a href="#secHome">CLUBE DA LUTA</a></h3>
                 <h3><a href="#secHome">INÍCIO</a></h3>
                 <h3><a href="#secFilme">FILME</a></h3>
                 <h3><a href="#secPersonagens">PERSONAGENS</a></h3>
                 <h3><a href="#secGaleria">GALERIA</a></h3>
                 <h3><a href="#secAvaliacao">AVALIAÇÃO</a></h3>
+                <h3><a href="#secFeedback">FEEDBACK</a></h3>
             </nav>
 
             <div id="github">
