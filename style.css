@@ -649,63 +649,42 @@ footer{
 }
 
 @media (max-width: 767px){
+
+    :root{
+        --margemLateral:5vw;
+    }
     header{
-        height: 12.5vh;
-        padding-top: 2.5vh;
+        height: 10vh;
+        
     }
 
     nav{
-        gap: 1.5vw;
+        gap: 2vw;
 
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     section{
-        height: 87.5vh;
-
-        scroll-margin-top: 12.5vh;
+        height: auto;
+        scroll-margin-top: 10vh;
+        padding-bottom: 5vh;
     }
 
     h1{
         padding-top: 2.5vh;
     }
 
-    label{
-        margin-top: 0.5;
-        margin-bottom: 1.5vh;
-
-        font-size: 2vh;
-    }
-
-    textarea{
-        margin-bottom: 2vh;
-    }
-
-    footer{
-        height: auto;
-        max-height: 65vh;
-        
-        padding: 2.5rem 1rem 1.5rem;
-        
-        border-top: 2px solid #222222;
-    }
 
     #mainHeader{
-        padding-top: 5vw;
         padding-right: 15vw;
 
-        gap: 15vw;
-    }
-
-    .navsBtn{
-        padding: 0.5vw;
+        gap: 2vw;
     }
 
     #logoProdutora{
-        width: clamp(56px, 18vw, 75px);
-        height: clamp(38px, 10vw, 50px);
-        margin-left: clamp(8px, 4vw, 15px);
-        margin-bottom: 1.5vh;
+        width:60px;
+        height:40px;
+        margin-left:2vw;
     }
 
     .pgTitulo{
@@ -719,15 +698,18 @@ footer{
     #secHome{
         background:
             url(./imgs/ftHomeMobile.jpg);
-        background-position: 40% -40vh;
+        background-position: 40% center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
 
             justify-content: center;
             align-items: center;
+            min-height: 90vh;
     }
 
     #mainHome{
         margin-left: 0;
-        margin-bottom: 85%;
         text-align: center;
     }
 
@@ -737,12 +719,12 @@ footer{
 
     #homeSubtitulo{
         font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.7);
+        text-align: center;
     }
 
     #filmeTitulo{
         justify-self: center;
         
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
 
         margin-left: 0;
         margin-bottom: 1vh;
@@ -751,40 +733,27 @@ footer{
     #infosFilme{
             flex-direction: column;
             justify-content: center;
-            align-items: center;
     }
 
     #bannerFilme{
-        height: 15vh;/*! 30vh */
-
+        height: 30vh;/*! 30vh */
+        width: 60vw;
         margin-left: 0;
         margin-bottom: 2.5vh;
     }
 
-    .infosbox{
-        width: 60vw;
-        height: 10vh;
-
-        margin-right: 0;
-        padding: 1rem;
-    }
-
     #infosBoxFilme{
-        height: 30vh;
+        height: auto;
         width: 90vw;
 
-        padding-top: 0;
-        font-size: 0.8rem;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        padding:1.5rem;
+        font-size: 0.9rem;
+        text-align: justify;
+        margin-top: 5vh;
     }
 
     #tituloResumo{
-        padding-top: 2.5vh;
+        text-align:center;
     }
 
     #secPersonagens{
@@ -814,29 +783,31 @@ footer{
         font-size: 1rem;
     }
 
+    #cardNarrador{background-position: center;}
+
     /** configurar em outro momento a forma das imagens dentro dos cards */
 
-    #cardNarrador{
-        background-position: center 30%;
-    }
-
-    #cardMarla{
-        margin-bottom: 3.5vh;
-    }
 
     /*! talvez tenha que ajustar o tamanho do padding do citacoes */
 
-    .citacoes{
-        padding-top: 0;
+    .persoPg{
+        padding-top:5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    #secPersonagensTyler{
-        padding-top: 0;
+    .persoPg .pgTitulo,
+     .persoPg .pgSubtitulo{
+        margin-bottom: 2vh;
+        text-align: center;
+        margin-left: 0;
+    
 
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    }
+
+
+    #secPersonagensTyler{
 
         background:
             radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
@@ -845,82 +816,15 @@ footer{
         background-size: cover;
     }
 
-    #persoTylerTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
-    }
-
-    #persoTylerSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
-
-        margin-bottom: 22vh;
-    }
-
-    #boxTyler{
-        width: 80vw;
-        height: 35vh;
-
-        margin-top: 10vh;
-        margin-left: 0;
-        margin-right: 0;
-
-        font-size: 1rem;
-    }
-
-    #boxTyler > .citacoes{
-        padding-top: 5px;
-
-        font-size: 1.2rem;
-    }
 
     #secPersonagensNarrador{
-        padding-top: 0;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
         background:
             radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
             url(./imgs/ftNarraPersopgMobile.jfif);
         background-position: 70% center;
-        background-size: cover;
-    }
-
-    #persoNarraTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
-    }
-
-    #persoNarraSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
-
-        margin-bottom: 33vh;
-    }
-
-    #boxNarrador{
-        width: 80vw;
-        height: 35vh;
-
-        margin-top: 4vh;
-        margin-left: 0;
-        margin-right: 0;
-
-        font-size: 1rem;
-    }
-
-    #boxNarrador > .citacoes{
-        padding-top: 7.5px;
-
-        font-size: 1.2rem;
     }
 
     #secPersonagensMarla{
-        padding-top: 0;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
         background:
             radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
@@ -929,31 +833,18 @@ footer{
         background-size: cover;
     }
 
-    #persoMarlaTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    .persoPg .infosBox {
+        width: 90vw;
+        margin: 0 auto;
+        padding: 1.5rem;
+        font-size: 0.95rem;
+        text-align: justify;
+
     }
 
-    #persoMarlaSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
-
-        margin-bottom: 32vh;
-    }
-
-    #boxMarla{
-        width: 80vw;
-        height: 40vh;
-
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 4vh;
-
-        font-size: 1rem;
-    }
-
-    #boxMarla > .citacoes{
-        padding-top: 7.5px;
-
+    .citacoes{
         font-size: 1.2rem;
+        padding-top: 10px;
     }
 
     #galeriaTitulo{
@@ -1110,37 +1001,6 @@ footer{
         font-size: 0.85rem;
         line-height: 1.5;
     }
-}
-
-@media (min-width: 768px) and (max-width: 1199px){
-    header{
-        height: 10vh;
-    }
-
-    #mainHeader{
-        width: 100%;
-        
-        padding: 0 2vw;
-        gap: 12vw;
-    }
-
-    #logoProdutora{
-        width: 116.5px;
-        height: 60px;
-        
-        margin-left: 4vw;
-    }
-
-    nav{
-        width: 72%;
-    
-        gap: 4vw;
-    
-            justify-content: flex-end;
-        
-        font-size: 1.25rem;
-    }
-
     label{
         margin-top: 0.5;
         margin-bottom: 1.5vh;
@@ -1153,12 +1013,55 @@ footer{
     }
 
     footer{
-        height: 50vh;
+        height: auto;
+        max-height: 65vh;
+        
+        padding: 2.5rem 1rem 1.5rem;
+        
+        border-top: 2px solid #222222;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+
+    :root{
+        --margemLateral:8vw;
     }
 
-    .navsBtn{
-        white-space: nowrap;
+    header{
+        height: 10vh;
     }
+
+    #mainHeader{
+        
+        padding: 0 2vw;
+        gap: 5vw;
+    }
+
+    #logoProdutora{
+        width: 90px;
+        height: 50px;
+        
+        margin-left: 2vw;
+    }
+
+    nav{
+        width: 80%;
+    
+        gap: 3vw;
+    
+        
+        font-size: 1.25rem;
+    }
+
+    section{
+        min-height: auto;
+        padding-bottom: 5vh;
+        border-bottom: 0.5rem solid #222222;
+
+    }
+
+
 
     #secHome{
         background:
@@ -1168,33 +1071,28 @@ footer{
         background-repeat: no-repeat;
         background-position: center;
 
-        display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
     }
 
     #mainHome{
-        margin-left: 0;
-        margin-bottom: 0;
-        
-            text-align: center;
+        margin: 0;
+        text-align: center;
     }
 
     #homeTitulo{
         font-size: calc(var(--tamanhoFontePgSubtitulo) * 5);
 
-        margin:0px;
     }
 
     #homeSubtitulo{
         font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+        text-align: center;
 
-        margin:0px;
     }
 
     #filmeTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
         
         margin-left: 0;
         margin-bottom: 1vh;
@@ -1209,40 +1107,25 @@ footer{
             justify-content: flex-start;
             align-items: center;
         
-        gap: 2vh;
+        gap: 3vh;
     }
 
     #bannerFilme{
-        width: 42.5vw;
-        height: 50vh;
+        width: 50vw;
+        height: 40vh;
 
-        min-height: 0;
-        max-height: 380px;
+        min-height: 300px;
         
-        margin-top: 1vh;
-        margin-left: 0;
+        margin: 0;
         
-        background-size: cover;
-        background-position: center;
     }
 
     #infosBoxFilme{
-        width: 80vw;
-        height: 36vh;
-
-        min-width: 0;
+        width: 85vw;
         max-width: 800px;
-        
-        min-height: 0;
-        max-height: 360px;
-        
-        margin-right: 0;
-        padding: 1.25rem;
-        
-        overflow: auto;
-        
-        font-size: 1rem;
-        line-height: 1.35;
+        margin: 0;
+        font-size: 16x;
+    
     }
 
     #tituloResumo{
@@ -1252,19 +1135,12 @@ footer{
     }
 
     #personagensTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
         
-        padding-top: 1.5vh;
+        padding-top: 1vh;
         margin-left: 0;
 
             align-self: center;
-    }
-
-    #personagensTitulo{
-        align-self: center;
-
-        margin-left: 0;
-        margin-bottom: 1vh;
     }
 
     #cardsPersonagens{
@@ -1283,9 +1159,7 @@ footer{
         font-size: 1rem;
     }
 
-    /** configurar em outro momento a forma das imagens dentro dos cards */
-
-    #cardTyler{
+        #cardTyler{
     margin-top: -2vh;
     }
 
@@ -1297,124 +1171,20 @@ footer{
         margin-bottom: 5vh;
     }
 
-    /*! fazer a diagramação da pagina de cada personagem, tentar manter as mesmas fotos do desktop */
-
-    .persoPg{
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-        background-size: cover;
-        background-position: center center;/* center provisorio, depois arrumar um jeito de dx o centro dele mais pra baixo */
-    }
-
-    #persoTylerTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
-
-            justify-self: center;
-
-        margin-top: -10vh;
-    }
-
-    #persoTylerSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
-
-            justify-self: center;
-    }
-
-    #boxTyler{
-        height: 35vh;
-        width: 90vw;
-
-        margin-top: 37.5vh;
-        margin-right: auto;
-        margin-left: auto;
-        padding-top: 5vh;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-        font-size: 1.3rem;
-    }
+       .persoPg .infosBox{
+        width:50vw;
+        max-width: 500px;
+       }
 
     #secPersonagensNarrador{
         background-image: url(./imgs/ftNarraPersopgMobile.jfif);
     }
 
-    #secPersonagensNarrador .infosBox{
-        margin-left: 20vw;
-    }
-
-    #persoNarraTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
-
-            justify-self: center;
-
-        margin-top: -10vh;
-    }
-
-    #persoNarraSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
-
-            justify-self: center;
-    }
-        /*? dar um jeito de centralizar horizontalmente */
-    #boxNarrador{
-        height: 35vh;
-        width: 90vw;
-
-        margin-top: 37.5vh;
-        padding-top: 2vh;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-        font-size: 1.3rem;
-    }
-
-    #persoMarlaTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
-
-            justify-self: center;
-
-        margin-top: -10vh;
-    }
-
-    #persoMarlaSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
-
-            justify-self: center;
-    }
-
-    #boxMarla{
-        height: 35vh;
-        width: 90vw;
-
-        margin-top: 37.5vh;
-        margin-right: auto;
-        margin-left: auto;
-        padding-top: 5vh;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-        font-size: 1.3rem;
-    }
 
     #galeriaTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
-
-        margin-top: -2.2vh;
-        margin-bottom: 1vh;
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+        align-self: center;
+        margin: 0;
     }
 
     #ftsGaleriaOrg{
@@ -1444,122 +1214,47 @@ footer{
         grid-area: 7 / 3 / 10 / 4;
     }
 
-    #secAvaliação{
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-        background-size: cover;
-        background-position: center center;/* center provisorio, depois arrumar um jeito de dx o centro dele mais pra baixo */
-    }
 
     #avaliacaoTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 3);
-
-            justify-self: center;
-
-        padding-top: 2.5vh;
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+        align-self: center;
+        margin: 0;
     }
 
     #infosBoxAval{
-        height: 30vh;
-        width: 90vw;
-
+        width: 85vw;
+        max-width: 800px;
         margin-top: 40vh;
-        margin-right: auto;
         margin-left: auto;
-        padding-top: 5vh;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        margin-right: auto;
     }
 
     .txtAval{
         font-size: 1.3rem;
-    }
-
-
-    #secFeedback{
-        background-image: url(./imgs/FotoAutoral.jpeg);
-        background-position: center center;
-
-        height: 80vh;
-        min-height: 70vh;
-    }
-
-    #feedbackTitulo{
-        width: 85vw;
-        
-        padding-top: 2vh;
-        
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 4);
-            text-align: center;
+        line-height: 1.6;
     }
 
 
     #boxFormsFeedback{
-        height: 27.5vh;
 
-        margin-bottom: 5vh;
-        padding: 1.5vh;
+        width: 85vw;
+        max-width: 600px;
+        margin: 5vh auto;
+    }
+
+    footer{
+        min-height: 40vh;
     }
 
     #navFooter{
-        width: 90%;
-        display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            column-gap: 1rem;
-            row-gap: 0.75rem;
-            text-align: center;
+        gap:20px;
     }
 
     #navFooter h3{
-        margin: 0;
-        margin-top: 2vh;
-        
-        font-size: 1.25rem;
+
+        font-size: 2rem;
+
     }
 
-    #navFooter h3:first-child{
-            grid-column: 1 / -1;
-        
-        margin-bottom: 0.5rem;
-        
-        color: #fcc928;
-        
-        font-size: 1.65rem;
-    }
-
-    #github{
-        width: 90%;
-        
-        gap: 0.75rem;
-        
-        padding: 2rem 0 1.5rem;
-    }
-
-    #github .githubLink{
-        width: min(218.75px, 48%);
-        height: 56px;
-        
-        margin-bottom: 0;
-        
-        border: 1px solid #6f7d8a;
-        
-        font-size: 1.5rem;
-    }
-
-    #textoFooter{
-        width: 90%;
-        max-width: 420px;
-        
-        margin: 0;
-        
-        font-size: 1rem;
-        line-height: 1.5;
-    }
 
 }
