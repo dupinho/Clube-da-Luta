@@ -47,8 +47,6 @@ a{
     text-decoration: none;
 }
 
-/*Header*/
-
 header{
     position: fixed;
     z-index: 2;
@@ -66,14 +64,6 @@ header{
         align-items: center;
 }
 
-#mainHeader{
-    width: 100%;
-
-    display: flex;
-        justify-content: space-between;
-        align-items: center;
-}
-
 nav{
     display: flex;
         justify-content: center;
@@ -81,6 +71,73 @@ nav{
     width: 50%;
     gap: 3vw;
     font-size: 1.5rem;
+}
+
+footer{
+    width: 100%;
+    height: 60vh;
+    
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    background-color:#07080D;
+    color: #FEFEFF;
+}
+
+section{
+    min-height: 100vh;
+    width: 100%;
+    
+    border-bottom: 0.5rem solid #222222;
+
+    scroll-margin-top: 10vh;
+}
+
+h1{
+    padding-top: 2vh;
+}
+
+form{
+    display: flex;
+        flex-direction: column;
+}
+
+label{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    font-size: 1.2rem;
+}
+
+input, textarea{
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 2vh;
+    font-family: var(--fontOswald);
+}
+
+textarea{
+    resize: vertical;
+    min-height: 10vh;
+}
+
+@keyframes trocaCapa {
+    from{
+        background-image: url(./imgs/ftCapa.jpg);
+    }
+    to{
+        background-image: url();
+    }
+}
+
+#mainHeader{
+    width: 100%;
+
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
 }
 
 #mainHeader > nav{
@@ -112,8 +169,6 @@ nav{
     object-position: left center;
 }
 
-/*Titulos*/
-
 .pgTitulo{
     color: var(--corText);
     font-size: var(--tamanhoFontePgTitulo);
@@ -130,21 +185,6 @@ nav{
     
     margin-left:var(--margemLateral);
     text-align: left;
-}
-
-/* sections */
-
-section{
-    min-height: 100vh;
-    width: 100%;
-    
-    border-bottom: 0.5rem solid #222222;
-
-    scroll-margin-top: 10vh;
-}
-
-h1{
-    padding-top: 2vh;
 }
 
 #secHome{
@@ -219,6 +259,8 @@ h1{
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
 
     transition: transform 0.3s ease;
+
+    animation: trocaCapa 5s ease-in-out alternate infinite;
 
     margin-left:var(--margemLateral);
 }
@@ -339,17 +381,17 @@ h1{
     background: 
         radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftTylerPersopg);
-     background-size: cover;
-     background-position: center;
+    background-size: cover;
+    background-position: center;
 }
 
 #secPersonagensNarrador{
     background: 
         radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftNarradorPersopg);
-      background-size: cover;
-      background-position: center;  
-      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
 }
 
 #secPersonagensNarrador .infosBox{
@@ -368,12 +410,8 @@ h1{
 }
 
 .persoPg .infosBox{
-
     margin-top: 4vh;
-
 }
-
-
 
 .citacoes{
     text-align: center;
@@ -486,17 +524,6 @@ h1{
     font-size: 32px;
 }
 
-
-footer{
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:#07080D;
-    color: #FEFEFF;
-}
-
 #secFeedback{
     height: 80vh;
 
@@ -513,7 +540,6 @@ footer{
         align-items: center;
 }
 
-
 #feedbackTitulo,#feedbackSubtitulo{
     margin-left:0;
 }
@@ -522,40 +548,11 @@ footer{
     margin-top: 5vh;
 }
 
-
-
-
 #boxFormsFeedback{
     height: fit-content;
     
     margin-top: 5vh;
     padding: 3vh;
-}
-
-form{
-    display: flex;
-        flex-direction: column;
-}
-
-label{
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-
-    font-size: 1.2rem;
-}
-
- input, textarea{
-
-    padding: 10px;
-    border-radius: 4px;
-    border: none;
-    margin-bottom: 2vh;
-    font-family: var(--fontOswald);
-}
-
-textarea{
-    resize: vertical;
-    min-height: 10vh;
 }
 
 #btnEnviar{
