@@ -3,12 +3,11 @@
     --corBackgroundHeaderCards: #07080D;
     --corBackgroundBoxInfos: #1A1A1A;
     --corText: #FEFEFF;
-    --tamanhoFontePgTitulo:4vw;
-    --tamanhoFontePgSubtitulo: 2vw;
+    --tamanhoFontePgTitulo:6vw;
+    --tamanhoFontePgSubtitulo: 3vw;
     --alturaCard: 70vh;
     --larguraCard: 25vw;
-    --alturaImgCard: 38vh;
-    --larguraImgCard: 18vw;
+    --margemLateral:6vw;
     --fontBabas: 'Bebas Neue', sans-serif;
     --fontOswald: 'Oswald', sans-serif;
 }
@@ -17,16 +16,35 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Bebas Neue', sans-serif;
+
 }
 
 html{
     scroll-behavior: smooth;
 }
 
+body{
+
+font-family: var(--fontOswald);
+background-color: var(--corBackgroundHeaderCards);
+color: var(--corText);
+
+}
+
 body::-webkit-scrollbar{
     display: none;
+}
+
+h1,h2,h3, .pgTitulo, .pgSubtitulo{
+
+    font-family: var(--fontBabas);
+    font-weight: normal;
+}
+
+a{
+    color: inherit;
+
+    text-decoration: none;
 }
 
 header{
@@ -55,8 +73,20 @@ nav{
     font-size: 1.5rem;
 }
 
+footer{
+    width: 100%;
+    height: 60vh;
+    
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    background-color:#07080D;
+    color: #FEFEFF;
+}
+
 section{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     
     border-bottom: 0.5rem solid #222222;
@@ -65,23 +95,41 @@ section{
 }
 
 h1{
-    padding-top: 5vh;
+    padding-top: 2vh;
 }
 
-a{
-    color: inherit;
-
-    text-decoration: none;
-}
-
-footer{
-    width: 100%;
-    height: 50vh;
+form{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:#07080D;
-    color: #FEFEFF;
+        flex-direction: column;
+}
+
+label{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    font-size: 1.2rem;
+}
+
+input, textarea{
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 2vh;
+    font-family: var(--fontOswald);
+}
+
+textarea{
+    resize: vertical;
+    min-height: 10vh;
+}
+
+@keyframes trocaCapa {
+    from{
+        background-image: url(./imgs/ftCapa.jpg);
+    }
+    to{
+        background-image: url(./imgs/ftCapaPhotoshop.png);
+    }
 }
 
 #mainHeader{
@@ -90,6 +138,10 @@ footer{
     display: flex;
         justify-content: space-between;
         align-items: center;
+}
+
+#mainHeader > nav{
+    margin-right: 5vw;
 }
 
 .barra{
@@ -121,18 +173,18 @@ footer{
     color: var(--corText);
     font-size: var(--tamanhoFontePgTitulo);
     font-family: var(--fontBabas);
-    font-weight: normal;
     
-    margin-left:5vw;
+    margin-left:var(--margemLateral);
+    text-align: left;
 }
 
 .pgSubtitulo{
     color: var(--corText);
     font-size: var(--tamanhoFontePgSubtitulo);
     font-family: var(--fontOswald);
-    font-weight: normal;
     
-    margin-left:5vw;
+    margin-left:var(--margemLateral);
+    text-align: left;
 }
 
 #secHome{
@@ -141,7 +193,7 @@ footer{
     height: 90vh;
 
     background:
-        radial-gradient(rgba(0, 0, 0, 0.50) 500px, #1a1a1a), 
+        radial-gradient(rgba(0, 0, 0, -0.50) 500px, #1a1a1a), 
         url(./imgs/ftHome.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -164,16 +216,18 @@ footer{
 }
 
 #homeSubtitulo{
-    margin:0px;
+    margin-bottom: 2vh;
+    margin-left: 0;
 }
 
 #secFilme{
     background:
-        radial-gradient(rgba(0, 0, 0, 0.50) 500px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 500px, #222222),
         url(./imgs/galpao.jfif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 5vh;
 }
 
 #filmeTitulo{
@@ -188,13 +242,12 @@ footer{
 }
 
 #bannerFilme{
-    width: 25vw;
-    max-width: 320px;
-    min-width: 220px;
 
-    height: 65vh;
-    min-height: 380px;
-    max-height: 520px;
+    height: 70vh;
+
+    width: 25vw;
+    max-width: 400px;
+    min-width: 250px;
 
     background-image: url(imgs/ftCapa.jpg);
     background-size: cover;
@@ -207,7 +260,9 @@ footer{
 
     transition: transform 0.3s ease;
 
-    margin-left: 5vw;
+    animation: trocaCapa 5s ease-in-out alternate infinite;
+
+    margin-left:var(--margemLateral);
 }
 
 #bannerFilme:hover{
@@ -217,6 +272,7 @@ footer{
 .infosBox{
     background-color: var(--corBackgroundBoxInfos);
     
+    height: fit-content;
     width: 36vw;
     min-width: 320px;
     max-width: 480px;
@@ -228,21 +284,31 @@ footer{
     margin-right: 3vw;
     padding: 2rem;
 
-    justify-self: flex-end;
-    align-self: center;
+        justify-self: flex-end;
+        align-self: center;
 }
 
 #infosBoxFilme{
     height: fit-content;
+    width: 40vw;
+    max-width: 520px;
+}
+
+#infosBox p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 #tituloResumo{
     padding-top: 0;
+    margin-bottom: 1.5vh;
+    font-size: 2.5rem;
 }
 
 #secPersonagens{
     background:
-        radial-gradient(rgba(0, 0, 0, 0.50) 500px, black), 
+        radial-gradient(rgba(0, 0, 0, -0.50) 500px, black), 
         url(./imgs/ftfundoPersonagens.jpeg);
         background-size: cover;
         background-attachment: fixed;
@@ -250,15 +316,10 @@ footer{
     
     display: flex;
         flex-direction: column;
-        align-items: center;
 }
 
 #personagensTitulo{
-    display: flex;
-        align-self: flex-start;
-    
-    padding-bottom: 2vh;
-    margin-left: 6vh;
+    margin-left: 3.2vw;
 }
 
 #cardsPersonagens{
@@ -268,6 +329,7 @@ footer{
         justify-content: space-around;
         align-items: center;
     gap: 50px;
+    margin-top: 3vh;
 }
 
 .cards{
@@ -281,12 +343,11 @@ footer{
 
     color: var(--corText);
     font-size: 1.5rem;
-    text-align: center;
+    padding-bottom: 1.5vh;
 
     border-radius: 8px;
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
-
     transition: transform 0.3s ease;
 }
 
@@ -315,48 +376,59 @@ footer{
     background-repeat: no-repeat;
 }
 
-.citacoes{
-    text-align: center;
-    padding-top: 15px;
-}
 
 #secPersonagensTyler{
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftTylerPersopg);
     background-size: cover;
     background-position: center;
-    padding-top: 10vh;
 }
 
 #secPersonagensNarrador{
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftNarradorPersopg);
     background-size: cover;
-    background-position: center;
+    background-position: center;  
+    background-repeat: no-repeat;
 }
 
 #secPersonagensNarrador .infosBox{
-    margin-left: 2.8vw;
-    margin-top: 5vh;
-
-    justify-self: flex-start;
+    margin-left:var(--margemLateral);
+    margin-right:auto;
+    margin-top: 7vh;
 }
 
 #secPersonagensMarla{
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftMarlaPersopg);
-    background-size: cover;
-    background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;  
+}
+
+.persoPg .infosBox{
+    margin-top: 4vh;
+}
+
+.citacoes{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    color: #fcc928;
 }
 
 #secGaleria{
-    height: 90vh;
+    height: 100vh;
     
-    background:radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
-        url(./imgs/GaleriaBackground.jpeg);
+    background:
+    radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+    url(imgs/FundoGaleria.jpeg);
+    background-size: cover;
+    background-position: center;
+
     
     display: flex;
         flex-direction: column;
@@ -365,9 +437,9 @@ footer{
 }
 
 #galeriaTitulo{
-    margin-bottom: 2vh;
+    margin-bottom: 4vh;
+    margin-left: 1.5vw;
 
-    align-self: center;
 }
 
 #ftsGaleriaOrg{
@@ -378,11 +450,13 @@ footer{
         grid-template-columns: repeat(9, minmax(0, 1fr));
         grid-template-rows: repeat(7, minmax(0, 1fr));
         gap: 8px;
+        margin-top: 2vh;
 }
 
 #ftsGaleriaOrg > div{
     min-height: 0;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 #ftsGaleriaOrg img{
@@ -421,39 +495,111 @@ footer{
 }
 
 #secAvaliacao{
-    height: 90vh;
+    height: 100vh;
 
     background: 
-        radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
+        radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
         url(./imgs/ftPlot);
     background-size: cover;
-    background-position: center -20vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
 }
 
-#secAvaliacao .infosBox{
-    font-size: 1.5rem;
+#infosBoxAval{
+    margin-top: 5vh;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    align-self: flex-end;
 }
 
 .estrelas {
     display: block;
     width: 100%;
-    margin-top: 0.2rem;
+    margin-top: 1rem;
     text-align: center;
 
     color: #ffc107;
     font-size: 32px;
 }
 
+#secFeedback{
+    height: 80vh;
+
+    background-image:
+    radial-gradient(rgba(0, 0, 0, -0.50) 600px, #222222),
+    url(imgs/FotoAutoral.jpeg);
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+#feedbackTitulo,#feedbackSubtitulo{
+    margin-left:0;
+}
+
+#feedbackTitulo{
+    margin-top: 5vh;
+}
+
+#boxFormsFeedback{
+    height: fit-content;
+    
+    margin-top: 5vh;
+    padding: 3vh;
+}
+
+#btnEnviar{
+    height: 6vh;
+    width: 15vh;
+
+    background-color: #d81b60;
+    color: var(--corText);
+
+    border-radius: 8px;
+
+    font-size: 1.5rem;
+    font-family: var(--fontBabas);
+    cursor: pointer;
+    transition: 0.3s;
+    
+        align-self: center;
+}
+
+#btnEnviar:hover{
+    background-color: #ad144b;
+}
+
+footer{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#07080D;
+    color: #FEFEFF;
+    padding: 5vh 0 ;
+}
 
 #navFooter{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:2vw;
+    margin-top: 5vh;
 }
 
 #navFooter h3{
-    margin-top: 4vh;
-    margin-bottom: 8vh;
+    margin-bottom: 5vh;
 
-    font-size: 1.65rem;
+    font-size: 2rem;
 }
 
 #github{
@@ -464,74 +610,78 @@ footer{
     padding-bottom: 30px;
 }
 
-#github button{
-    height: 87.5px;
-    width: 218.75px;
+#github .githubLink{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+
+    height:60px;
+    width: 200px;
     
     border-radius: 8px;
     
     text-align: center;
+    text-decoration: none;
     
     background-color: #5C6B7A;
     
-    font-size: 1.75rem;
+    font-size: 1.25rem;
 
-    margin-bottom: 5vh;
+    transition: 0.3s;
+}
+
+#github .githubLink:hover{
+
+    background-color: #7a8b9e;
+
 }
 
 #textoFooter{
     text-align: center;
     font-size: 1.5rem;
+    max-width: 80vw;
+    line-height: 1.4;
 
-    margin-bottom: 2vh;
+    margin-top: 2vh;
 }
 
 @media (max-width: 767px){
+
+    :root{
+        --margemLateral:5vw;
+    }
     header{
-        height: 12.5vh;
-        padding-top: 2.5vh;
+        height: 10vh;
+        
     }
 
     nav{
-        gap: 1.5vw;
+        gap: 2vw;
 
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     section{
-        height: 87.5vh;
-
-        scroll-margin-top: 12.5vh;
+        height: auto;
+        scroll-margin-top: 10vh;
+        padding-bottom: 5vh;
     }
 
     h1{
         padding-top: 2.5vh;
     }
 
-    footer{
-        height: 47.5vh;
-        
-        padding: 2.5rem 1rem 1.5rem;
-        
-        border-top: 2px solid #222222;
-    }
 
     #mainHeader{
-        padding-top: 5vw;
         padding-right: 15vw;
 
-        gap: 15vw;
-    }
-
-    .navsBtn{
-        padding: 0.5vw;
+        gap: 2vw;
     }
 
     #logoProdutora{
-        width: clamp(56px, 18vw, 75px);
-        height: clamp(38px, 10vw, 50px);
-        margin-left: clamp(8px, 4vw, 15px);
-        margin-bottom: 1.5vh;
+        width:60px;
+        height:40px;
+        margin-left:2vw;
     }
 
     .pgTitulo{
@@ -545,15 +695,18 @@ footer{
     #secHome{
         background:
             url(./imgs/ftHomeMobile.jpg);
-        background-position: 40% -40vh;
+        background-position: 40% center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
 
             justify-content: center;
             align-items: center;
+            min-height: 90vh;
     }
 
     #mainHome{
         margin-left: 0;
-        margin-bottom: 85%;
         text-align: center;
     }
 
@@ -563,12 +716,12 @@ footer{
 
     #homeSubtitulo{
         font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.7);
+        text-align: center;
     }
 
     #filmeTitulo{
         justify-self: center;
         
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
 
         margin-left: 0;
         margin-bottom: 1vh;
@@ -577,40 +730,27 @@ footer{
     #infosFilme{
             flex-direction: column;
             justify-content: center;
-            align-items: center;
     }
 
     #bannerFilme{
-        height: 15vh;/*! 30vh */
-
+        height: 30vh;/*! 30vh */
+        width: 60vw;
         margin-left: 0;
         margin-bottom: 2.5vh;
     }
 
-    .infosbox{
-        width: 60vw;
-        height: 10vh;
-
-        margin-right: 0;
-        padding: 1rem;
-    }
-
     #infosBoxFilme{
-        height: 30vh;
+        height: auto;
         width: 90vw;
 
-        padding-top: 0;
-        font-size: 0.8rem;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        padding:1.5rem;
+        font-size: 0.9rem;
+        text-align: justify;
+        margin-top: 5vh;
     }
 
     #tituloResumo{
-        padding-top: 2.5vh;
+        text-align:center;
     }
 
     #secPersonagens{
@@ -640,29 +780,31 @@ footer{
         font-size: 1rem;
     }
 
+    #cardNarrador{background-position: center;}
+
     /** configurar em outro momento a forma das imagens dentro dos cards */
 
-    #cardNarrador{
-        background-position: center 30%;
-    }
-
-    #cardMarla{
-        margin-bottom: 3.5vh;
-    }
 
     /*! talvez tenha que ajustar o tamanho do padding do citacoes */
 
-    .citacoes{
-        padding-top: 0;
+    .persoPg{
+        padding-top:5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
-    #secPersonagensTyler{
-        padding-top: 0;
+    .persoPg .pgTitulo,
+     .persoPg .pgSubtitulo{
+        margin-bottom: 2vh;
+        text-align: center;
+        margin-left: 0;
+    
 
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    }
+
+
+    #secPersonagensTyler{
 
         background:
             radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
@@ -671,82 +813,15 @@ footer{
         background-size: cover;
     }
 
-    #persoTylerTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
-    }
-
-    #persoTylerSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
-
-        margin-bottom: 22vh;
-    }
-
-    #boxTyler{
-        width: 80vw;
-        height: 35vh;
-
-        margin-top: 10vh;
-        margin-left: 0;
-        margin-right: 0;
-
-        font-size: 1rem;
-    }
-
-    #boxTyler > .citacoes{
-        padding-top: 5px;
-
-        font-size: 1.2rem;
-    }
 
     #secPersonagensNarrador{
-        padding-top: 0;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
         background:
             radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
             url(./imgs/ftNarraPersopgMobile.jfif);
         background-position: 70% center;
-        background-size: cover;
-    }
-
-    #persoNarraTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
-    }
-
-    #persoNarraSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
-
-        margin-bottom: 33vh;
-    }
-
-    #boxNarrador{
-        width: 80vw;
-        height: 35vh;
-
-        margin-top: 4vh;
-        margin-left: 0;
-        margin-right: 0;
-
-        font-size: 1rem;
-    }
-
-    #boxNarrador > .citacoes{
-        padding-top: 7.5px;
-
-        font-size: 1.2rem;
     }
 
     #secPersonagensMarla{
-        padding-top: 0;
-
-        display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
         background:
             radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
@@ -755,31 +830,18 @@ footer{
         background-size: cover;
     }
 
-    #persoMarlaTitulo{
-        font-size: calc(var(--tamanhoFontePgTitulo) * 2.5);
+    .persoPg .infosBox {
+        width: 90vw;
+        margin: 0 auto;
+        padding: 1.5rem;
+        font-size: 0.95rem;
+        text-align: justify;
+
     }
 
-    #persoMarlaSubtitulo{
-        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2.5);
-
-        margin-bottom: 32vh;
-    }
-
-    #boxMarla{
-        width: 80vw;
-        height: 40vh;
-
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 4vh;
-
-        font-size: 1rem;
-    }
-
-    #boxMarla > .citacoes{
-        padding-top: 7.5px;
-
+    .citacoes{
         font-size: 1.2rem;
+        padding-top: 10px;
     }
 
     #galeriaTitulo{
@@ -846,6 +908,43 @@ footer{
         font-size: 1.3rem;
     }
 
+    #secFeedback{
+        background-image: url(./imgs/FotoAutoral.jpeg);
+        background-position: center center;
+
+        height: auto;
+        min-height: 70vh;
+    }
+
+    #feedbackTitulo{
+        width: 85vw;
+        padding-top: 1vh;
+        text-align: center;
+    }
+
+    #infosFeedback{
+        display: flex;
+            flex-direction: column;
+
+        gap: 2vh;
+    }
+
+    #boxFeedback{
+        height: 20vh;
+        width: 30vh;
+
+        padding-top: 2vh;
+
+        font-size: 2vh;
+    }
+
+    #boxFormsFeedback{
+        height: 27.5vh;
+
+        margin-bottom: 5vh;
+        padding: 1.5vh;
+    }
+
     #navFooter{
         width: 90%;
         display: grid;
@@ -879,7 +978,7 @@ footer{
         padding: 2rem 0 1.5rem;
     }
 
-    #github button{
+    #github .githubLink{
         width: min(218.75px, 48%);
         height: 56px;
         
@@ -888,15 +987,6 @@ footer{
         border: 1px solid #6f7d8a;
         
         font-size: 1.05rem;
-    }
-
-    #github button a{
-        display: flex;
-            align-items: center;
-            justify-content: center;
-        
-            width: 100%;
-        height: 100%;
     }
 
     #textoFooter{
@@ -908,6 +998,260 @@ footer{
         font-size: 0.85rem;
         line-height: 1.5;
     }
+    label{
+        margin-top: 0.5;
+        margin-bottom: 1.5vh;
+
+        font-size: 2vh;
+    }
+
+    textarea{
+        margin-bottom: 2vh;
+    }
+
+    footer{
+        height: auto;
+        max-height: 65vh;
+        
+        padding: 2.5rem 1rem 1.5rem;
+        
+        border-top: 2px solid #222222;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 1199px){}
+@media (min-width: 768px) and (max-width: 1199px){
+
+    :root{
+        --margemLateral:8vw;
+    }
+
+    header{
+        height: 10vh;
+    }
+
+    #mainHeader{
+        
+        padding: 0 2vw;
+        gap: 5vw;
+    }
+
+    #logoProdutora{
+        width: 90px;
+        height: 50px;
+        
+        margin-left: 2vw;
+    }
+
+    nav{
+        width: 80%;
+    
+        gap: 3vw;
+    
+        
+        font-size: 1.25rem;
+    }
+
+    section{
+        min-height: auto;
+        padding-bottom: 5vh;
+        border-bottom: 0.5rem solid #222222;
+
+    }
+
+
+
+    #secHome{
+        background:
+            radial-gradient(rgba(0, 0, 0, -10) 500px, #1a1a1a),
+            url(./imgs/ftHomeMobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+            justify-content: center;
+            align-items: center;
+    }
+
+    #mainHome{
+        margin: 0;
+        text-align: center;
+    }
+
+    #homeTitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 5);
+
+    }
+
+    #homeSubtitulo{
+        font-size: calc(var(--tamanhoFontePgSubtitulo) * 2);
+        text-align: center;
+
+    }
+
+    #filmeTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+        
+        margin-left: 0;
+        margin-bottom: 1vh;
+        
+            text-align: center;
+    }
+
+    #infosFilme{
+        height: 78vh;
+
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        
+        gap: 3vh;
+    }
+
+    #bannerFilme{
+        width: 50vw;
+        height: 40vh;
+
+        min-height: 300px;
+        
+        margin: 0;
+        
+    }
+
+    #infosBoxFilme{
+        width: 85vw;
+        max-width: 800px;
+        margin: 0;
+        font-size: 16x;
+    
+    }
+
+    #tituloResumo{
+        padding-top: 0;
+        
+            text-align: center;
+    }
+
+    #personagensTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+        
+        padding-top: 1vh;
+        margin-left: 0;
+
+            align-self: center;
+    }
+
+    #cardsPersonagens{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        gap: 2.5vh;
+    }
+    
+    .cards{
+        width: 80vw;
+        height: 22.5vh;
+
+        font-size: 1rem;
+    }
+
+        #cardTyler{
+    margin-top: -2vh;
+    }
+
+    #cardNarrador{
+        background-position: center 35%;
+    }
+
+    #cardMarla{
+        margin-bottom: 5vh;
+    }
+
+       .persoPg .infosBox{
+        width:50vw;
+        max-width: 500px;
+       }
+
+    #secPersonagensNarrador{
+        background-image: url(./imgs/ftNarraPersopgMobile.jfif);
+    }
+
+
+    #galeriaTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+        align-self: center;
+        margin: 0;
+    }
+
+    #ftsGaleriaOrg{
+        display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            grid-column-gap: 12px;
+            grid-row-gap: 12px;
+    }
+
+    #ftGaleria1{
+        grid-area: 1 / 1 / 4 / 3;
+    }
+    #ftGaleria2{
+        grid-area: 1 / 3 / 4 / 4;
+    }
+    #ftGaleria3{
+        grid-area: 4 / 2 / 7 / 4;
+    }
+    #ftGaleria4{
+        grid-area: 4 / 1 / 7 / 2;
+    }
+    #ftGaleria5{
+        grid-area: 7 / 1 / 10 / 3;
+    }
+    #ftGaleria6{
+        grid-area: 7 / 3 / 10 / 4;
+    }
+
+
+    #avaliacaoTitulo{
+        font-size: calc(var(--tamanhoFontePgTitulo) * 2);
+        align-self: center;
+        margin: 0;
+    }
+
+    #infosBoxAval{
+        width: 85vw;
+        max-width: 800px;
+        margin-top: 40vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .txtAval{
+        font-size: 1.3rem;
+        line-height: 1.6;
+    }
+
+
+    #boxFormsFeedback{
+
+        width: 85vw;
+        max-width: 600px;
+        margin: 5vh auto;
+    }
+
+    footer{
+        min-height: 40vh;
+    }
+
+    #navFooter{
+        gap:20px;
+    }
+
+    #navFooter h3{
+
+        font-size: 2rem;
+
+    }
+
+
+}
