@@ -25,9 +25,11 @@ html{
 
 
 body{
-    font-family: var(--fontOswald);
-    background-color: var(--corBackgroundHeaderCards);
-    color: var(--corText);
+
+font-family: var(--fontOswald);
+background-color: var(--corBackgroundHeaderCards);
+color: var(--corText);
+
 }
 
 body::-webkit-scrollbar{
@@ -35,6 +37,7 @@ body::-webkit-scrollbar{
 }
 
 h1,h2,h3, .pgTitulo, .pgSubtitulo{
+
     font-family: var(--fontBabas);
     font-weight: normal;
 }
@@ -66,9 +69,7 @@ nav{
     display: flex;
         justify-content: center;
         align-items: center;
-    
     width: 50%;
-    
     gap: 3vw;
     font-size: 1.5rem;
 }
@@ -129,6 +130,24 @@ textarea{
     }
     to{
         background-image: url(./imgs/ftCapaPhotoshop.png);
+    }
+}
+
+@keyframes trocaCard {
+    from{
+        background-image: url(./imgs/ftTylerPersoCard.jpg);
+    }
+    to{
+        background-image: url(./imgs/TylerMontez.png);
+    }
+}
+
+@keyframes trocaCard2 {
+    from{
+        background-image: url(./imgs/ftcardNarrador.png);
+    }
+    to{
+        background-image: url(./imgs/ftCardNarradorSantista.png);
     }
 }
 
@@ -232,6 +251,7 @@ textarea{
 
 #filmeTitulo{
     margin-bottom: 2vh;
+    
 }
 
 #infosFilme{
@@ -260,7 +280,7 @@ textarea{
 
     transition: transform 0.3s ease;
 
-    animation: trocaCapa 15s ease-in-out alternate infinite;
+    animation: trocaCapa 5s ease-in-out alternate infinite;
 
     margin-left:var(--margemLateral);
 }
@@ -356,17 +376,27 @@ textarea{
 }
 
 #cardTyler{
-    background-image: url(imgs/TylerMontez.png);
+    background-image: url(imgs/ftTylerPersoCard.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+#cardTyler:hover{
+
+    animation: trocaCard ease-in-out alternate 3s;
+
+}
+
+#cardNarrador{
+    background-image: url(imgs/ftcardNarrador.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#cardNarrador{
-    background-image: url(imgs/ftcardNarradorSantista.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#cardNarrador:hover{
+    animation: trocaCard2 ease-in-out alternate 3s;
 }
 
 #cardMarla{
@@ -631,7 +661,9 @@ footer{
 }
 
 #github .githubLink:hover{
+
     background-color: #7a8b9e;
+
 }
 
 #textoFooter{
@@ -644,6 +676,7 @@ footer{
 }
 
 @media (max-width: 767px){
+
     :root{
         --margemLateral:5vw;
     }
@@ -668,14 +701,9 @@ footer{
         padding-top: 2.5vh;
     }
 
-    label{
-        font-size: 1rem;
-    }
-
 
     #mainHeader{
         padding-right: 15vw;
-        margin-top: 4vh;
 
         gap: 2vw;
     }
@@ -722,9 +750,9 @@ footer{
     }
 
     #filmeTitulo{
-            justify-self: center;
+        justify-self: center;
+        
 
-        padding-top: 1vh;
         margin-left: 0;
         margin-bottom: 1vh;
     }
@@ -745,12 +773,10 @@ footer{
         height: auto;
         width: 90vw;
 
-        font-size: 0.9rem;
-            text-align: justify;
-        
         padding:1.5rem;
-        margin-top: 3vh;
-        margin-left: 1.5vh;
+        font-size: 0.9rem;
+        text-align: justify;
+        margin-top: 5vh;
     }
 
     #tituloResumo{
@@ -762,18 +788,17 @@ footer{
     }
 
     #personagensTitulo{
-            align-self: center;
+        align-self: center;
 
-        margin-top: -10vh;
         margin-left: 0;
-        padding-bottom: -10vh;
+        margin-bottom: 1vh;
     }
 
     #cardsPersonagens{
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
         gap: 2.5vh;
     }
@@ -785,24 +810,32 @@ footer{
         font-size: 1rem;
     }
 
-    #cardNarrador{
-        background-position: center;
-    }
+    #cardNarrador{background-position: center;}
 
-    #cardTyler{
-        background-image: url(imgs/TylerMontez.png);
-        background-size: 210%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+    /** configurar em outro momento a forma das imagens dentro dos cards */
+
+
+    /*! talvez tenha que ajustar o tamanho do padding do citacoes */
 
     .persoPg{
+        padding-top:5vh;
         display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
+    .persoPg .pgTitulo,
+     .persoPg .pgSubtitulo{
+        margin-bottom: 2vh;
+        text-align: center;
+        margin-left: 0;
+    
+
+    }
+
+
     #secPersonagensTyler{
+
         background:
             radial-gradient(rgba(0, 0, 0, 0.50) 600px, #222222),
             url(./imgs/ftTylerPersopgMobile.jfif);
@@ -851,8 +884,6 @@ footer{
         font-size: calc(var(--tamanhoFontePgTitulo) * 2);
         align-self: center;
 
-        margin-top: -1.5vh;
-        margin-bottom: -2vh;
     }
 
     #ftsGaleriaOrg{
@@ -882,22 +913,20 @@ footer{
     }
 
     #secAvaliacao{
-        justify-content: space-between;
+         justify-content: space-between;
     }
 
     #avaliacaoTitulo{
         text-align: center;
         margin: 0;
          font-size: calc(var(--tamanhoFontePgTitulo) * 2);
-
     }
 
     #infosBoxAval{
-        width: 90vw;
-        
+
+           width: 90vw;
         margin: 5vh auto;
         padding: 1.5rem;
-        
         font-size: 1rem;
     }
 
@@ -909,9 +938,10 @@ footer{
     }
 
     #secFeedback{
-        padding-bottom: 0;
-        
+
+        padding-bottom: 5vh;
         background-position: center center;
+
     }
 
     #feedbackTitulo{
@@ -927,6 +957,10 @@ footer{
         width: 90vw;
         margin: 5vh auto;
         padding: 1.5rem;
+    }
+
+        label{
+        font-size: 1rem;
     }
 
     #navFooter{
@@ -978,7 +1012,6 @@ footer{
         max-width: 420px;
         
         margin: 0;
-        margin-bottom: 15vh;
         
         font-size: 0.85rem;
         line-height: 1.5;
@@ -1033,7 +1066,7 @@ footer{
             url(./imgs/ftHomeMobile.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center ;
 
             justify-content: center;
             align-items: center;
@@ -1065,7 +1098,7 @@ footer{
     }
 
     #infosFilme{
-        height: 78vh;
+        height: 100vh;
 
             flex-direction: column;
             justify-content: flex-start;
@@ -1179,6 +1212,7 @@ footer{
     }
 
 
+
     #avaliacaoTitulo{
         font-size: calc(var(--tamanhoFontePgTitulo) * 2);
         align-self: center;
@@ -1188,9 +1222,7 @@ footer{
     #infosBoxAval{
         width: 85vw;
         max-width: 800px;
-        margin-top: 40vh;
-        margin-left: auto;
-        margin-right: auto;
+        margin:30vh auto;
     }
 
     .txtAval{
@@ -1224,9 +1256,8 @@ footer{
 }
 @media(min-width:1400px){
     :root{
-        --tamanhoFontePgTitulo:5rem;
+        --tamanhoFontePgTitulo:6rem;
         --tamanhFontePgSubtitulo:2.5rem;
-        --margemLateral:10vw;
     }
 
     .infosBoxFilme,.infosBox{
