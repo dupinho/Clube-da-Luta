@@ -1123,7 +1123,7 @@ footer{
         font-size: 1rem;
     }
 
-        #cardTyler{
+    #cardTyler{
     margin-top: -2vh;
     }
 
@@ -1135,10 +1135,10 @@ footer{
         margin-bottom: 5vh;
     }
 
-       .persoPg .infosBox{
+    .persoPg .infosBox{
         width:50vw;
         max-width: 500px;
-       }
+    }
 
     #secPersonagensNarrador{
         background-image: url(./imgs/ftNarraPersopgMobile.jfif);
@@ -1219,9 +1219,8 @@ footer{
         font-size: 2rem;
 
     }
-
-
 }
+
 @media(min-width:1400px){
     :root{
         --tamanhoFontePgTitulo:5rem;
